@@ -1,6 +1,6 @@
 <h1>NVIM Dotfiles</h1>
 
-[Back To Windows-Dotfiles <-](https://github.com/AndreM222/Windows-Dotfiles) - For Detailed Setup
+[Back To Windows-Dotfiles <-](https://github.com/AndreM222/Windows-Dotfiles) (For Detailed Setup)
 
 <h2>Dependencies 📃</h2>
 

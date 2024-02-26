@@ -103,10 +103,10 @@ keymap.set("x", "\\p", [["_dP]], { desc = "Paste Without Copying" })
 keymap.set({"n", "v"}, "\\d", [["_d]], { desc = "Delete Without Copying" })
 
 -- Folds
-keymap.set('n', '<A-=>', '<Cmd>foldopen<CR>', { desc = "Open Fold" })
-keymap.set('n', '<A-->', '<Cmd>foldclose<CR>', { desc = "Close Fold" })
-keymap.set('n', '+', '<Cmd>OpenAllFolds<CR>', { desc = "Open All Folds" })
-keymap.set('n', '_', '<Cmd>CloseAllFolds<CR>', { desc = "Close All Folds" })
+keymap.set('n', '+', '<Cmd>foldopen<CR>', { desc = "Open Fold" })
+keymap.set('n', '_', '<Cmd>foldclose<CR>', { desc = "Close Fold" })
+keymap.set('n', '<A-=>', '<Cmd>OpenAllFolds<CR>', { desc = "Open All Folds" })
+keymap.set('n', '<A-->', '<Cmd>CloseAllFolds<CR>', { desc = "Close All Folds" })
 
 -- Ctrl Movement
 keymap.set({ 'n', 'v' }, '<C-Right>', 'E', { desc = "Move to End of Word" })

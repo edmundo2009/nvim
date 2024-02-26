@@ -50,8 +50,7 @@ keymap.set('n', '<Tab>', '<Cmd>BufferLineCycleNext<CR> {}', { desc = "Next Buffe
 keymap.set('n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR> {}', { desc = "Previous Buffer" })
 
 -- Comment Binding
-keymap.set('i', '<C-_>', '<ESC><Plug>(comment_toggle_linewise_current)==gi', { desc = "Toggle Comment" })
-keymap.set('n', '<C-_>', '<Plug>(comment_toggle_linewise_current)', { desc = "Toggle Comment" })
+keymap.set({ 'i', 'n' }, '<C-_>', '<ESC><Plug>(comment_toggle_linewise_current)', { desc = "Toggle Comment" })
 keymap.set('x', '<C-_>', '<Plug>(comment_toggle_linewise_visual)', { desc = "Toggle Comment" })
 keymap.set('x', '<C-A-_>', '<Plug>(comment_toggle_blockwise_visual)', { desc = "Toggle Comment" })
 

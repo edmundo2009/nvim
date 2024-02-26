@@ -69,13 +69,15 @@ dracula.setup({
         -- DAP
         DapUIConditionOutline = { fg = dracula.colors().orange},
         DapLogPoint = { fg = dracula.colors().cyan },
-        NoiceFormatProgressDone = { bg = dracula.colors().orange },
 
         -- Copilot
         CmpItemKindCopilot = { fg = dracula.colors().red },
 
         -- Bufferline
-        BufferLineSeparator = { fg = dracula.colors().bg }
+        BufferLineSeparator = { fg = dracula.colors().bg },
+
+        -- Noice Beautify
+        NoiceFormatProgressDone = { bg = dracula.colors().orange },
     },
 
     transparent_bg = true,

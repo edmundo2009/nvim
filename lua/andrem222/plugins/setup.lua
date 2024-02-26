@@ -88,6 +88,11 @@ return {
                 }
             })
 
+            nvim_lsp.powershell_es.setup({
+                on_attach = on_attach,
+                capabilities = capabilities
+            })
+
             -- html
             nvim_lsp.html.setup({
                 on_attach = on_attach,
@@ -215,7 +220,8 @@ return {
                     "vimls",
                     "csharp_ls",
                     "tailwindcss",
-                    "cssls"
+                    "cssls",
+                    "powershell_es"
                 },
                 automatic_installation = true
             })

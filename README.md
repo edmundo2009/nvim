@@ -16,7 +16,7 @@
 
 <h5>Package Managers 📦</h5>
 
-- [Python](https://www.python.org/) - `winget install python` - <span style="opacity:30%">pip</span>
+- [Python](https://www.python.org/) - `winget install python3` - <span style="opacity:30%">pip</span>
 
 - [Rust](https://www.rust-lang.org/) - `winget install Rustlang.Rust.GNU` - <span style="opacity:30%">cargo</span>
 

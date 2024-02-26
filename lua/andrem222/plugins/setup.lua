@@ -206,7 +206,7 @@ return {
 
             -- Setuo Null-ls on mason
             require("mason-null-ls").setup({
-                ensure_installed = { "prettierd", "clang-format", "eslint_d" },
+                ensure_installed = { "prettier", "clang-format", "eslint_d", "autopep8" },
                 automatic_setup = true
             })
 
@@ -243,7 +243,7 @@ return {
                 border = 'single',
                 sources = {
                     -- Formatting
-                    null_ls.builtins.formatting.prettierd.with({
+                    null_ls.builtins.formatting.prettier.with({
                         extra_args = function(params)
                             return params.options
                                 and params.options.tabSize

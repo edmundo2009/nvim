@@ -8,7 +8,7 @@ return {
             cozynight.insert.a.bg = '#f7397c'
             cozynight.insert.b.fg = '#f7397c'
             cozynight.visual.a.bg = '#ffb86c'
-            cozynight.visual.b.fg = '#ffb86c'
+            cozynight.visual.b.fg = '#ffb85c'
 
             require("lualine").setup({
                 options = {
@@ -30,6 +30,11 @@ return {
                     },
                     lualine_c = { 'filename' },
                     lualine_x = {
+                        {
+                            require("noice").api.statusline.mode.get,
+                            cond = require("noice").api.statusline.mode.has,
+                            color = { fg = "#ffb85c" },
+                        },
                         {
                             'copilot',
                             symbols = {

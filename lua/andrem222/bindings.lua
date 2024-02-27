@@ -20,29 +20,22 @@ keymap.set('n', '<F6>', '<Cmd>LspInfo<CR>', { silent = true }, { desc = "LSP Inf
 keymap.set('n', '<F7>', '<Cmd>NullLsInfo<CR>', { silent = true }, { desc = "NullLS Info" })
 
 -- Saving Bindings
-keymap.set({ 'n', 'v' }, '<C-s>', '<Esc><Cmd>w<CR>', { silent = true }, { desc = "Save" })
-keymap.set({ 'n', 'v' }, '<C-A-s>', '<Esc><Cmd>wa<CR>', { silent = true }, { desc = "Save All" })
-keymap.set({ 'i', 'n', 'v' }, '<A-w>', '<Esc><Cmd>wqa<CR>', { desc = "Save All and Quit" })
-keymap.set({ 'i', 'n', 'v' }, '<A-q>', '<Esc><Cmd>q!<CR>', { desc = "Quit" })
-keymap.set({ 'i', 'n', 'v' }, '<C-A-q>', '<Esc><Cmd>qa!<CR>', { desc = "Quit All" })
-
-keymap.set('i', '<C-s>', '<Esc><Cmd>wa<CR>==gi', { silent = true }, { desc = "Save all" })
-keymap.set('i', '<C-A-s>', '<Esc><Cmd>w<CR>==gi', { silent = true }, { desc = "Save" })
+keymap.set({ '!', '' }, '<C-s>', '<Esc><Cmd>w<CR>', { silent = true }, { desc = "Save" })
+keymap.set({ '!', '' }, '<C-A-s>', '<Esc><Cmd>wa<CR>', { silent = true }, { desc = "Save All" })
+keymap.set({ '!', '' }, '<A-w>', '<Esc><Cmd>wqa<CR>', { desc = "Save All and Quit" })
+keymap.set({ '!', '' }, '<A-q>', '<Esc><Cmd>q!<CR>', { desc = "Quit" })
+keymap.set({ '!', '' }, '<C-A-q>', '<Esc><Cmd>qa!<CR>', { desc = "Quit All" })
 
 -- Moving Selections
-keymap.set('n', '<A-Down>', ':m .+1<CR>==', { silent = true }, { desc = "Move Selection Down" })
-keymap.set('n', '<A-Up>', ':m .-2<CR>==', { silent = true }, { desc = "Move Selection Up" })
-keymap.set('i', '<A-Down>', '<Esc>:m .+1<CR>==gi', { silent = true }, { desc = "Move Selection Down" })
-keymap.set('i', '<A-Up>', '<Esc>:m .-2<CR>==gi', { silent = true }, { desc = "Move Selection Up" })
+keymap.set({ 'n', 'i' }, '<A-Down>', '<Esc>:m .+1<CR>==', { silent = true }, { desc = "Move Selection Down" })
+keymap.set({ 'n', 'i' }, '<A-Up>', '<Esc>:m .-2<CR>==', { silent = true }, { desc = "Move Selection Up" })
 keymap.set('v', '<A-Down>', [[:m '>+1<CR>gv=gv]], { silent = true }, { desc = "Move Selection Down" })
 keymap.set('v', '<A-Up>', [[:m '<-2<CR>gv=gv]], { silent = true }, { desc = "Move Selection Up" })
 
+keymap.set({ 'n', 'i' }, '<A-Left>', '<Esc><<', { desc = "Move Selection Left" })
+keymap.set({ 'n', 'i' }, '<A-Right>', '<Esc>>>', { desc = "Move Selection Right" })
 keymap.set('v', '<A-Left>', '<gv', { desc = "Move Selection Left" })
 keymap.set('v', '<A-Right>', '>gv', { desc = "Move Selection Right" })
-keymap.set('i', '<A-Left>', '<Esc><<i', { desc = "Move Selection Left" })
-keymap.set('i', '<A-Right>', '<Esc>>>i', { desc = "Move Selection Right" })
-keymap.set('n', '<A-Left>', '<<', { desc = "Move Selection Left" })
-keymap.set('n', '<A-Right>', '>>', { desc = "Move Selection Right" })
 
 -- Bufferline Bindings
 keymap.set('n', '<S-q>', '<Cmd>bdelete<CR>', { desc = "Close Buffer" })
@@ -112,7 +105,7 @@ keymap.set({ 'n', 'v' }, '<C-Right>', 'E', { desc = "Move to End of Word" })
 keymap.set('i', '<C-Right>', '<C-o>E<Right>', { desc = "Move to End of Word" })
 
 -- Select all
-keymap.set({ 'i', 'v', 'n' }, '<C-A-a>', '<Esc> ggVG', { desc = "Select All" })
+keymap.set({ '!', '' }, '<C-A-a>', '<Esc> ggVG', { desc = "Select All" })
 
 -- Harpoon
 keymap.set('n', '\\bs', '<Cmd>HarpoonMark<CR>', { desc = "Set bookmark" })

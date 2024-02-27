@@ -206,7 +206,8 @@ return {
 
             -- Setuo Null-ls on mason
             require("mason-null-ls").setup({
-                ensure_installed = { "prettier", "clang-format", "eslint_d", "autopep8" },
+                ensure_installed = { "prettier", "clang-format" },
+                -- ensure_installed = { "prettier", "clang-format", "eslint_d", "autopep8" },
                 automatic_setup = true
             })
 
@@ -260,12 +261,12 @@ return {
                     null_ls.builtins.formatting.clang_format.with({
                         extra_args = { "--style=Microsoft" }
                     }),
-                    null_ls.builtins.formatting.autopep8,
-
-                    -- Diagnostics
-                    null_ls.builtins.diagnostics.eslint_d.with({
-                        diagnostics_format = '[eslint] #{m}\n(#{c})'
-                    })
+                    -- null_ls.builtins.formatting.autopep8,
+                    --
+                    -- -- Diagnostics
+                    -- null_ls.builtins.diagnostics.eslint_d.with({
+                    --     diagnostics_format = '[eslint] #{m}\n(#{c})'
+                    -- })
                 }
             })
         end,

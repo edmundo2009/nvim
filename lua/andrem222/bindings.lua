@@ -6,6 +6,7 @@ keymap.set('n', '\\r', '<Cmd>ResumeSearch<CR>', { silent = true }, { desc = "Res
 keymap.set('n', '\\f', '<Cmd>FileParse<CR>', { silent = true }, { desc = "File Parse" })
 keymap.set('n', '\\l', '<cmd>Telescope live_grep<cr>', { silent = true }, { desc = "Live Grep" })
 keymap.set('n', '\\w', '<Cmd>Telescope diagnostics<CR>', { silent = true }, { desc = "Show Diagnostics" })
+keymap.set('n', '\\g', '<Cmd>Telescope git_status<CR>', { silent = true }, { desc = "Browse Files" })
 keymap.set('n', '\\\\', '<Cmd>Telescope buffers<CR>', { silent = true }, { desc = "Show Buffers" })
 keymap.set('n', '<F3>', '<Cmd>Telescope help_tags<CR>', { silent = true }, { desc = "Show Help Tags" })
 keymap.set('n', '<F4>', '<Cmd>Telescope keymaps<CR>', { silent = true }, { desc = "Show Keymaps" })

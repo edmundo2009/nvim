@@ -230,6 +230,8 @@ Read: `To visualize on vim the keybindings press F3. I also documented all my cu
 
 `\ + w` - Telescope Diagnostics
 
+`\ + g` - Telescope Git-Status
+
 `F2` - Telescope Help Tags
 
 `F3` - Telescope Keymaps

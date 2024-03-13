@@ -54,10 +54,10 @@ return {
             capabilities.offsetEncoding = { "utf-16" }
 
             -- TypeScript
-            nvim_lsp.tsserver.setup {
+            nvim_lsp.tsserver.setup({
                 on_attach = on_attach,
                 capabilities = capabilities
-            }
+            })
             -- C, C++
             nvim_lsp.clangd.setup({
                 on_attach = on_attach,
@@ -113,16 +113,16 @@ return {
             })
 
             -- CSS
-            nvim_lsp.cssls.setup {
+            nvim_lsp.cssls.setup({
                 on_attach = on_attach,
                 capabilities = capabilities
-            }
+            })
 
             -- TailwindCSS
-            nvim_lsp.tailwindcss.setup {
+            nvim_lsp.tailwindcss.setup({
                 on_attach = on_attach,
                 capabilities = capabilities
-            }
+            })
 
             vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
                 vim.lsp.diagnostic.on_publish_diagnostics, {

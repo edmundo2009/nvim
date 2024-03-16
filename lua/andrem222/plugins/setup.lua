@@ -211,8 +211,8 @@ return {
 
             -- Setuo Null-ls on mason
             require("mason-null-ls").setup({
-                ensure_installed = { "prettier", "clang-format" },
-                -- ensure_installed = { "prettier", "clang-format", "eslint_d", "autopep8" },
+                -- ensure_installed = { "prettier", "clang-format" },
+                ensure_installed = { "prettier", "clang-format", "eslint_d", "autopep8" },
                 automatic_setup = true
             })
 
@@ -242,6 +242,7 @@ return {
     },
     {
         'nvimtools/none-ls.nvim', -- Linter and Formatting
+        dependencies = 'nvimtools/none-ls-extras.nvim',
         config = function()
             local null_ls = require("null-ls")
 
@@ -266,12 +267,12 @@ return {
                     null_ls.builtins.formatting.clang_format.with({
                         extra_args = { "--style=Microsoft" }
                     }),
-                    -- null_ls.builtins.formatting.autopep8,
-                    --
-                    -- -- Diagnostics
-                    -- null_ls.builtins.diagnostics.eslint_d.with({
-                    --     diagnostics_format = '[eslint] #{m}\n(#{c})'
-                    -- })
+                    require("none-ls.formatting.autopep8"),
+
+                    -- Diagnostics
+                    require("none-ls.code_actions.eslint_d").with({
+                        diagnostics_format = '[eslint] #{m}\n(#{c})'
+                    })
                 }
             })
         end,

@@ -93,11 +93,21 @@ return {
                 }
             })
 
-            -- PowerShell
-            nvim_lsp.powershell_es.setup({
-                on_attach = on_attach,
-                capabilities = capabilities
-            })
+            -- Setup lsp for shell
+            if (vim.fn.has('unix')) then
+                -- Bash
+                nvim_lsp.bashls.setup({
+                    filetypes = { "sh", "zsh" },
+                    on_attach = on_attach,
+                    capabilities = capabilities
+                })
+            else
+                -- PowerShell
+                nvim_lsp.powershell_es.setup({
+                    on_attach = on_attach,
+                    capabilities = capabilities
+                })
+            end
 
             -- HTML
             nvim_lsp.html.setup({
@@ -211,10 +221,12 @@ return {
 
             -- Setuo Null-ls on mason
             require("mason-null-ls").setup({
-                -- ensure_installed = { "prettier", "clang-format" },
+                automatic_installation = true,
                 ensure_installed = { "prettier", "clang-format", "eslint_d", "autopep8" },
                 automatic_setup = true
             })
+
+
 
             -- Setup lspconfig on mason
             require("mason-lspconfig").setup({
@@ -228,13 +240,19 @@ return {
                     "csharp_ls",
                     "tailwindcss",
                     "cssls",
-                    "powershell_es"
+                    (function()
+                        if (vim.fn.has('unix')) then
+                            return "bashls"
+                        end
+                        return "powershell_es"
+                    end)()
                 },
                 automatic_installation = true
             })
 
             -- Setup dap on mason
             require("mason-nvim-dap").setup({
+                automatic_installation = true,
                 ensure_installed = { "codelldb", "cppdbg" },
                 handlers = {}
             })

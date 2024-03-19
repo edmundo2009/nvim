@@ -1,17 +1,17 @@
 return {
-    {
-        "zbirenbaum/copilot.lua",
-        cmd = "Copilot",
-        build = ":Copilot auth",
-        opts = {
-            suggestion = { enabled = true },
-            panel = { enabled = false },
-            filetypes = {
-                markdown = true,
-                help = true,
-            },
-        }
-    },
+    -- {
+    --     "zbirenbaum/copilot.lua",
+    --     cmd = "Copilot",
+    --     build = ":Copilot auth",
+    --     opts = {
+    --         suggestion = { enabled = true },
+    --         panel = { enabled = false },
+    --         filetypes = {
+    --             markdown = true,
+    --             help = true,
+    --         },
+    --     }
+    -- },
     {
         'hrsh7th/nvim-cmp', -- Autocompletion
         dependencies = {
@@ -19,7 +19,6 @@ return {
             'hrsh7th/cmp-buffer',
             {
                 "zbirenbaum/copilot-cmp",
-                dependencies = "copilot.lua",
                 opts = {},
                 config = function(_, opts)
                     require("copilot_cmp").setup(opts)

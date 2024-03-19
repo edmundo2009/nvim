@@ -13,13 +13,11 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 vim.opt.updatetime = 100
-vim.opt.mouse = 'a'
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
-vim.opt.shell = "pwsh"
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.autoindent = true
 vim.opt.smarttab = true
@@ -28,7 +26,7 @@ vim.opt.signcolumn = "yes:1"
 vim.opt.breakindent = true
 vim.opt.ai = true
 vim.opt.si = true
-vim.opt.backspace = { 'start','eol','indent' }
+vim.opt.backspace = { 'start', 'eol', 'indent' }
 vim.opt.path:append({ "**" })
 vim.opt.wildignore:append({ "*/node_modules/*" })
 vim.opt.scrolloff = 10
@@ -41,15 +39,20 @@ vim.opt.splitright = true -- Put new windows right of current
 vim.opt.splitkeep = "cursor"
 
 -- Remove indent line in dashboard
-vim.g.indent_blankline_filetype_exclude = {'dashboard'}
+vim.g.indent_blankline_filetype_exclude = { 'dashboard' }
 
--- Visual Multi Cursor Remap And Enable Mouse
-vim.g.VM_mouse_mappings = 1
-vim.g.VM_leader = { default = 'm', visual = 'm', buffer = 'm' }
+-- Shell Setup
+if (vim.fn.has('unix')) then
+    vim.opt.shell = "bash"
+else
+    vim.opt.shell = "pwsh"
+end
 
+-- Folding Setup
 vim.o.foldlevel = 99
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 vim.o.foldcolumn = "1"
 
-vim.o.statuscolumn = '%s%=%{v:relnum?v:relnum:v:lnum} %{foldlevel(v:lnum) > foldlevel(v:lnum - 1) ? (foldclosed(v:lnum) == -1 ? "" : "") : " " } '
+vim.o.statuscolumn =
+'%s%=%{v:relnum?v:relnum:v:lnum} %{foldlevel(v:lnum) > foldlevel(v:lnum - 1) ? (foldclosed(v:lnum) == -1 ? "" : "") : " " } '

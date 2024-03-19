@@ -108,9 +108,5 @@ keymap.set('i', '<C-Right>', '<C-o>E<Right>', { desc = "Move to End of Word" })
 -- Select all
 keymap.set({ '!', '' }, '<C-A-a>', '<Esc> ggVG', { desc = "Select All" })
 
--- Harpoon
-keymap.set('n', '\\bs', '<Cmd>HarpoonMark<CR>', { desc = "Set bookmark" })
-keymap.set('n', '\\bl', '<Cmd>Harpoon<CR>', { desc = "Open bookmarks" })
-
 -- Deselect
 keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })

@@ -83,3 +83,5 @@ dracula.setup({
     transparent_bg = true,
     show_end_of_buffer = true -- Enable for setup of true transparency
 })
+
+vim.cmd('colorscheme dracula')

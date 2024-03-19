@@ -9,6 +9,9 @@ end
 -- Startup settings
 require('andrem222.config')
 
+-- Setup autocmd
+require('andrem222.autocmd')
+
 -- Lazy setup and plugins
 require('andrem222.lazy')
 
@@ -17,5 +20,3 @@ require('andrem222.theme')
 
 -- Mapping of keys
 require('andrem222.bindings')
-
-vim.cmd('colorscheme dracula')

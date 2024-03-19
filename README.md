@@ -110,8 +110,8 @@ nvm use lts
   - [Nvim-DAP-UI](https://github.com/rcarriga/nvim-dap-ui) - UI Setup
     
   - [Nvim-DAP-Virtual-Text](https://github.com/theHamsta/nvim-dap-virtual-text) - Virtual Text Setup
-  </details>
 
+- [Nvim-NIO](https://github.com/nvim-neotest/nvim-nio) - Asynchronous IO
 - [Nvim-UFO](https://github.com/kevinhwang91/nvim-ufo) - Folding Design
   <details> <summary>Dependencies</summary>
     
@@ -120,12 +120,10 @@ nvm use lts
 
 - [Vim-Illuminate](https://github.com/RRethy/vim-illuminate) - Highlight
 - [Nvim-Surround](https://github.com/kylechui/nvim-surround) - Sorround Selection With Desired Character
-- [Harpoon](https://github.com/ThePrimeagen/harpoon) - Bookmark
 - [Dashboard-Nvim](https://github.com/nvimdev/dashboard-nvim) - Startup Screen
 - [copilot](https://github.com/zbirenbaum/copilot.lua) - Copilot
 - [Dial](https://github.com/monaqa/dial.nvim) - Improved Increment And Decrement
-- [Vim-Matchip](https://github.com/andymass/vim-matchup) - Improved Navigation Key
-- [Mini.Animate](https://github.com/echasnovski/mini.animate) - Scroll Animation
+- [Vim-Matchup](https://github.com/andymass/vim-matchup) - Improved Navigation Key
 - [Incline](https://github.com/b0o/incline.nvim) - Floating statusline
 - [Noice](https://github.com/folke/noice.nvim) - UI For Messages, CMDLine, and Popmenu
   <details> <summary>Dependencies</summary>
@@ -327,10 +325,6 @@ Read: `To visualize on vim the keybindings press F3. I also documented all my cu
 `CTRL - Alt - /` - Comment BLock
 
 `CTRL - Shift - a` - Select All
-
-`CTRL - h` - Open Harpoon UI
-
-`K` - Save Harpoon Mark
 
 `Esc` - Clear hlsearch
 

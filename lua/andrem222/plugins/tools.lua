@@ -56,7 +56,6 @@ return {
 
             telescope.load_extension("file_browser")
             telescope.load_extension("ui-select")
-            telescope.load_extension('harpoon')
 
             -- Bindings
             vim.api.nvim_create_user_command(
@@ -95,14 +94,6 @@ return {
                 end,
                 { nargs = 0 }
             )
-
-            vim.api.nvim_create_user_command(
-                "Harpoon",
-                function()
-                    telescope.extensions.harpoon.marks(themes.get_dropdown({ previewer = false }))
-                end,
-                { nargs = 0 }
-            )
         end
     },
     {
@@ -115,26 +106,6 @@ return {
                     code_action = ""
                 }
             })
-        end,
-    },
-    {
-        'ThePrimeagen/harpoon', -- Bookmarking
-        config = function()
-            vim.api.nvim_create_user_command(
-                "HarpoonMark",
-                function()
-                    require 'harpoon.mark'.add_file()
-                    vim.notify(
-                        vim.fn.expand('%:t') ..
-                        " [" .. vim.api.nvim_win_get_cursor(0)[1] .. ":" .. vim.api.nvim_win_get_cursor(0)[2] .. "]",
-                        "info",
-                        {
-                            icon = "",
-                            title = "Bookmarked"
-                        })
-                end,
-                { nargs = 0 }
-            )
         end,
     },
     {

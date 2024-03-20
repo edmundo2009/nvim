@@ -129,7 +129,7 @@ return {
                         {
                             desc = ' Dotfiles',
                             group = 'Number',
-                            action = 'Telescope file_browser cwd=$HOME/Appdata/local/nvim', -- Change to your dotfiles path
+                            action = 'Telescope file_browser cwd='..vim.fn.stdpath("config").."/lua/andrem222", -- Change to your dotfiles path
                             key = 'd',
                         },
                         {

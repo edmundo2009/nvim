@@ -94,16 +94,17 @@ return {
             })
 
             -- Setup lsp for shell
-            if (vim.fn.has('unix')) then
+            if (os.getenv("WINDIR") and not os.getenv("WSL_INTEROP")) then
+                -- PowerShell
+                nvim_lsp.powershell_es.setup({
+                    on_attach = on_attach,
+                    capabilities = capabilities,
+                    bundle_path = vim.fn.stdpath("data") .. "/mason/packages/powershell-editor-services"
+                })
+            else
                 -- Bash
                 nvim_lsp.bashls.setup({
                     filetypes = { "sh", "zsh" },
-                    on_attach = on_attach,
-                    capabilities = capabilities
-                })
-            else
-                -- PowerShell
-                nvim_lsp.powershell_es.setup({
                     on_attach = on_attach,
                     capabilities = capabilities
                 })
@@ -242,10 +243,10 @@ return {
                     "tailwindcss",
                     "cssls",
                     (function()
-                        if (vim.fn.has('unix')) then
-                            return "bashls"
+                        if (os.getenv("WINDIR") and not os.getenv("WSL_INTEROP")) then
+                            return "powershell_es"
                         end
-                        return "powershell_es"
+                        return "bashls"
                     end)()
                 },
                 automatic_installation = true

@@ -42,10 +42,10 @@ vim.opt.splitkeep = "cursor"
 vim.g.indent_blankline_filetype_exclude = { 'dashboard' }
 
 -- Shell Setup
-if (vim.fn.has('unix')) then
-    vim.opt.shell = "bash"
-else
+if (os.getenv("WINDIR") and not os.getenv("WSL_INTEROP")) then
     vim.opt.shell = "pwsh"
+else
+    vim.opt.shell = "zsh"
 end
 
 -- Folding Setup

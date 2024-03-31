@@ -277,15 +277,17 @@ return {
                                 and {
                                     "--tab-width",
                                     params.options.tabSize,
-                                    "--trailing-comma none",
+                                    "--trailing-comma",
+                                    "none",
                                     "--no-semi",
-                                    "--arrow-parens avoid",
+                                    "--arrow-parens",
+                                    "avoid",
                                     "--single-quote",
                                 }
                         end,
                     }),
                     null_ls.builtins.formatting.clang_format.with({
-                        extra_args = { "--style=Microsoft" }
+                        extra_args = { "--style", "Microsoft" }
                     }),
                     require("none-ls.formatting.autopep8"),
 

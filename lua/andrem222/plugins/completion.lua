@@ -28,12 +28,10 @@ return {
         config = function()
             local cmp = require("cmp")
 
-            vim.api.nvim_set_hl(0, "cmpnormal", { bg = "#21222c" })
-
             cmp.setup({
                 window = {
                     documentation = {
-                        winhighlight = "normal:cmpnormal",
+                        winhighlight = "Normal:Pmenu,FloatBorder:Pmenu"
                     }
                 },
                 snippet = {

@@ -111,7 +111,6 @@ nvm use lts
 - [Vim-Illuminate](https://github.com/RRethy/vim-illuminate) - Highlight
 - [Dashboard-Nvim](https://github.com/nvimdev/dashboard-nvim) - Startup Screen
 - [Dial](https://github.com/monaqa/dial.nvim) - Improved Increment And Decrement
-- [Vim-Matchup](https://github.com/andymass/vim-matchup) - Improved Navigation Key
 - [Incline](https://github.com/b0o/incline.nvim) - Floating statusline
 - [Noice](https://github.com/folke/noice.nvim) - UI For Messages, CMDLine, and Popmenu
   <details> <summary>Dependencies</summary>

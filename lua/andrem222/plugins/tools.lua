@@ -152,11 +152,5 @@ return {
                 dapui.open()
             end
         end,
-    },
-    {
-        "andymass/vim-matchup", -- Improve Pair Matching
-        config = function()
-            vim.g.matchup_matchparen_offscreen = { method = "popup" }
-        end,
     }
 }

@@ -1,29 +1,11 @@
 return {
-    -- {
-    --     "zbirenbaum/copilot.lua",
-    --     cmd = "Copilot",
-    --     build = ":Copilot auth",
-    --     opts = {
-    --         suggestion = { enabled = true },
-    --         panel = { enabled = false },
-    --         filetypes = {
-    --             markdown = true,
-    --             help = true,
-    --         },
-    --     }
-    -- },
     {
         'hrsh7th/nvim-cmp', -- Autocompletion
         dependencies = {
             'hrsh7th/cmp-nvim-lsp',
             'hrsh7th/cmp-buffer',
-            {
-                "zbirenbaum/copilot-cmp",
-                opts = {},
-                config = function(_, opts)
-                    require("copilot_cmp").setup(opts)
-                end,
-            },
+            'L3MON4D3/LuaSnip',
+            'saadparwaiz1/cmp_luasnip'
         },
         config = function()
             local cmp = require("cmp")
@@ -50,12 +32,7 @@ return {
                 sources = cmp.config.sources({
                     { name = 'nvim_lsp' },
                     { name = 'buffer' },
-                    { name = 'luasnip' },
-                    {
-                        name = "copilot",
-                        group_index = 1,
-                        priority = 100
-                    }
+                    { name = 'luasnip' }
                 }),
                 formatting = {
                     fields = { 'kind', 'abbr', 'menu' },
@@ -118,13 +95,11 @@ return {
                     Struct = "",
                     Event = "",
                     Operator = "",
-                    TypeParameter = "",
-                    Copilot = ""
+                    TypeParameter = ""
                 }
             })
         end
     },
-    { 'L3MON4D3/LuaSnip' },      -- Snip
     {
         'windwp/nvim-autopairs', -- Autopairs
         config = function()

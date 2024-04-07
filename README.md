@@ -52,43 +52,34 @@ nvm use lts
 <h2>Neovim Plugins 📲</h2>
 
 - [Lualine](https://github.com/nvim-lualine/lualine.nvim) - Neovim Bar
-  <details> <summary>Dependencies</summary>
-    
-  - [Copilot-Lualine](https://github.com/AndreM222/copilot-lualine) - Copilot Status Setup
-  </details>
-
 - [nvim-Web-Devicons](https://github.com/kyazdani42/nvim-web-devicons) - Icons
 - [Nvim-Tree](https://github.com/kyazdani42/nvim-tree.lua) - Neovim Tree
 - [LSPConfig](https://github.com/neovim/nvim-lspconfig) - Keys Configuration
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim) - Telescope
   <details> <summary>Dependencies</summary>
-    
+
   - [Plenary](https://github.com/nvim-lua/plenary.nvim) - Lua Files Setup
-    
+
   - [Telescope-File-Browser](https://github.com/nvim-telescope/telescope-file-browser.nvim) - Browsing Setup
-  
-  - [Telescope-UI-Select](https://github.com/nvim-telescope/telescope-ui-select.nvim) - Select UI Setup
   </details>
 
 - [Markdown Preview](https://github.com/iamcco/markdown-preview.nvim) - Live Markdown Preview
 - [Nvim-CMP](https://github.com/hrsh7th/nvim-cmp) - Auto Complete Setup
   <details> <summary>Dependencies</summary>
-    
+
   - [CMP-Nvim-LSP](https://github.com/hrsh7th/cmp-nvim-lsp) - LSP Setup
-    
+
   - [CMP-Buffer](https://github.com/hrsh7th/cmp-buffer) - Buffer Setup
-  
-  - [Copilot-CMP](https://github.com/hrsh7th/cmp-copilot) - Copilot Setup
   </details>
 
 - [Lspkind-Nvim](https://github.com/onsails/lspkind.nvim) - Icons for Nvim LSP
 - [Mason-nvim](https://github.com/williamboman/mason.nvim) - Package manager for neovim
   <details> <summary>Dependencies</summary>
-    
+
   - [Mason-Null-LS](https://github.com/jay-babu/mason-null-ls.nvim) - Null-LS Setup
-    
+
   - [Mason-LSPConfig](https://github.com/williamboman/mason-lspconfig.nvim) - LSPConfig Setup
-  
+
   - [Mason-Nvim-DAP](https://github.com/jay-babu/mason-nvim-dap.nvim) - DAP Setup
   </details>
 
@@ -102,40 +93,39 @@ nvm use lts
 - [NVim-Colorizer](https://github.com/NvChad/nvim-colorizer.lua) - Color Preview
 - [None-LS](https://github.com/nvimtools/none-ls.nvim) - Formatting Languages And Linter
 - [Indent-Blankline](https://github.com/lukas-reineke/indent-blankline.nvim) - Indent Lines
-- [Nvim-Notify](https://github.com/rcarriga/nvim-notify) - Animated Notifications
 - [Lspsaga](https://github.com/glepnir/lspsaga.nvim) - LSP UI
 - [DAP](https://github.com/mfussenegger/nvim-dap) - Debugger
   <details> <summary>Dependencies</summary>
-    
+
   - [Nvim-DAP-UI](https://github.com/rcarriga/nvim-dap-ui) - UI Setup
-    
+
   - [Nvim-DAP-Virtual-Text](https://github.com/theHamsta/nvim-dap-virtual-text) - Virtual Text Setup
 
 - [Nvim-NIO](https://github.com/nvim-neotest/nvim-nio) - Asynchronous IO
 - [Nvim-UFO](https://github.com/kevinhwang91/nvim-ufo) - Folding Design
   <details> <summary>Dependencies</summary>
-    
+
   - [Promise-Async](https://github.com/kevinhwang91/promise-async) - Port With JavaScript Setup
   </details>
 
 - [Vim-Illuminate](https://github.com/RRethy/vim-illuminate) - Highlight
-- [Nvim-Surround](https://github.com/kylechui/nvim-surround) - Sorround Selection With Desired Character
 - [Dashboard-Nvim](https://github.com/nvimdev/dashboard-nvim) - Startup Screen
-- [copilot](https://github.com/zbirenbaum/copilot.lua) - Copilot
 - [Dial](https://github.com/monaqa/dial.nvim) - Improved Increment And Decrement
 - [Vim-Matchup](https://github.com/andymass/vim-matchup) - Improved Navigation Key
 - [Incline](https://github.com/b0o/incline.nvim) - Floating statusline
 - [Noice](https://github.com/folke/noice.nvim) - UI For Messages, CMDLine, and Popmenu
   <details> <summary>Dependencies</summary>
-    
+
+  - [Nvim-Notify](https://github.com/rcarriga/nvim-notify) - Animated Notifications
+
   - [NUI](https://github.com/MunifTanjim/nui.nvim) - UI Component Setup
   </details>
 
 - [Refactoring](https://github.com/ThePrimeagen/refactoring.nvim) - Refactoring
   <details> <summary>Dependencies</summary>
-    
+
   - [Plenary](https://github.com/nvim-lua/plenary.nvim) - Lua Files Setup
-    
+
   - [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - Highlight Functions Setup
   </details>
 
@@ -178,7 +168,7 @@ nvm use lts
 
 <h5>Dotnet - Windows Installed</h5>
 
-`C-Sharp` dotnet tool install --global csharp-ls 
+`C-Sharp` dotnet tool install --global csharp-ls
 
 <h3>Format Languages 📄 <hr style="margin-top: 0"></h3>
 
@@ -340,12 +330,12 @@ Problem: `Icons are not showing completly`
 
 Fix:
 ```
-Some fonts do not work well with some color themes and can cause that issue or the terminal. 
+Some fonts do not work well with some color themes and can cause that issue or the terminal.
 You have to try until you find the right font, switch the theme, terminal or make tweaks by yourself. Generaly fonts ending with mono work.
 ```
 problem: `Transparency Not Available`
 
-Fix: 
+Fix:
 ```
 Check you enabled transparency in the temrinal. If you still encounter
 problems then you probably have to enable it from your nvim configuration.

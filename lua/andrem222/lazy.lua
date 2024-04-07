@@ -12,8 +12,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-        { import = "andrem222.plugins" },
-    },
+    { import = "andrem222.plugins" },
+},
 
     {
         dev = {
@@ -33,6 +33,7 @@ require("lazy").setup({
                     "tohtml",
                     "tutor",
                     "zipPlugin",
+                    "netrwPlugin"
                 }
             }
         }

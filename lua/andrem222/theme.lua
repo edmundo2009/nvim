@@ -70,9 +70,6 @@ dracula.setup({
         DapUIConditionOutline = { fg = dracula.colors().orange},
         DapLogPoint = { fg = dracula.colors().cyan },
 
-        -- Copilot
-        CmpItemKindCopilot = { fg = dracula.colors().red },
-
         -- Bufferline
         BufferLineSeparator = { fg = dracula.colors().bg },
 

@@ -1,7 +1,6 @@
 return {
     {
         'nvim-lualine/lualine.nvim', -- Status Line
-        dependencies = { "AndreM222/copilot-lualine" },
         config = function()
             local cozynight = require('lualine.themes.palenight')
 
@@ -35,20 +34,6 @@ return {
                             cond = require("noice").api.statusline.mode.has,
                             color = { fg = "#ffb85c" },
                         },
-                        {
-                            'copilot',
-                            symbols = {
-                                status = {
-                                    icons = {
-                                        enabled = "",
-                                        sleep = "",
-                                        disabled = "",
-                                        warning = "",
-                                        unknown = ""
-                                    }
-                                }
-                            }
-                        },
                         'encoding',
                         'fileformat',
                         'filetype'
@@ -71,29 +56,6 @@ return {
     },
     { 'kyazdani42/nvim-web-devicons' },                      -- Icons
     { "lukas-reineke/indent-blankline.nvim", main = "ibl" }, -- Indent Line
-    {
-        'rcarriga/nvim-notify',
-        opts = {
-            timeout = 5000,
-        },
-        config = function()
-            local notify = require('notify')
-
-            notify.setup({ background_colour = "#000000" })
-            vim.notify = notify
-
-            -- Notification Update
-            local client_notifs = {}
-
-            local function get_notif_data(client_id, token)
-                if not client_notifs[client_id] then client_notifs[client_id] = {} end
-
-                if not client_notifs[client_id][token] then client_notifs[client_id][token] = {} end
-
-                return client_notifs[client_id][token]
-            end
-        end
-    },                          -- Notification
     {
         'Mofiqul/dracula.nvim', -- Theme
         lazy = true,
@@ -229,9 +191,23 @@ return {
         "folke/noice.nvim", -- UI For Messages, CMDLine, and Popmenu
         event = "VeryLazy",
         dependencies = {
-            "MunifTanjim/nui.nvim"
+            "MunifTanjim/nui.nvim",
+            "rcarriga/nvim-notify"
         },
         config = function()
+            local root = vim.fn.fnamemodify("./.repro", ":p")
+
+            -- Notify Setup
+            require("notify").setup({ background_colour = "#000000" })
+
+            -- bootstrap lazy
+            local lazypath = root .. "/plugins/lazy.nvim"
+            if not vim.loop.fs_stat(lazypath) then
+                vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", lazypath, })
+            end
+            vim.opt.runtimepath:prepend(lazypath)
+
+            -- Noice Setup
             require("noice").setup({
                 lsp = {
                     -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
@@ -254,6 +230,7 @@ return {
     },
     {
         'akinsho/nvim-bufferline.lua', -- Buffer Tabs
+        event ="VeryLazy",
         config = function()
             require("bufferline").setup({
                 options = {

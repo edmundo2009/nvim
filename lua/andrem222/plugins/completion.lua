@@ -4,7 +4,20 @@ return {
         dependencies = {
             'hrsh7th/cmp-nvim-lsp',
             'hrsh7th/cmp-buffer',
-            'L3MON4D3/LuaSnip',
+            {
+                'L3MON4D3/LuaSnip',
+                build = (vim.uv.os_uname().sysname:find("Windows") ~= nil)
+                    and "echo 'NOTE: jsregexp is optional, so not a big deal if it fails to build'; make install_jsregexp"
+                    or nil,
+                dependencies = {
+                    {
+                        "rafamadriz/friendly-snippets", -- More Snippets
+                        config = function()
+                            require("luasnip.loaders.from_vscode").lazy_load()
+                        end,
+                    },
+                }
+            },
             'saadparwaiz1/cmp_luasnip'
         },
         config = function()

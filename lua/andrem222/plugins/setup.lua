@@ -183,7 +183,8 @@ return {
                     "c_sharp",
                     "python",
                     "javascript",
-                    "vimdoc"
+                    "vimdoc",
+                    "regex"
                 },
                 highlight = {
                     enable = true,

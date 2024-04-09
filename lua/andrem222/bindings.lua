@@ -56,11 +56,16 @@ keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', { desc = "Show Hover" })
 keymap.set('n', '<A-k>', '<Cmd>Lspsaga peek_definition<CR>', { desc = "Peek Definition" })
 keymap.set('n', '<C-k>', '<Cmd>Lspsaga goto_definition<CR>', { desc = "Go to Definition" })
 keymap.set('n', 'gd', '<Cmd>Lspsaga finder<CR>', { desc = "Find References and Implementations" })
-keymap.set('n', 'gr', '<Cmd>Lspsaga rename<CR>', { desc = "Rename" })
 keymap.set('n', 'gp', '<Cmd>Lspsaga code_action<CR>', { desc = "Code Action" })
 keymap.set('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', { desc = "Jump to Next Diagnostic" })
 keymap.set('n', '<C-S-j>', '<Cmd>Lspsaga diagnostic_jump_prev<CR>', { desc = "Jump to Previous Diagnostic" })
 keymap.set('n', 'gl', '<Cmd>Lspsaga show_line_diagnostics<CR>', { desc = "Show Line Diagnostics" })
+
+-- Inc Rename
+keymap.set('n', 'gr',function()
+    local inc_rename = require("inc_rename")
+    return ":" .. inc_rename.config.cmd_name .. " " .. vim.fn.expand("<cword>")
+end, { expr = true }, { desc = "Rename" })
 
 -- Split window
 keymap.set("n", "ss", ":split<Return>", { noremap = true, silent = true }, { desc = "Horizontal Split Window" })

@@ -67,6 +67,10 @@ nvm use lts
 - [Nvim-CMP](https://github.com/hrsh7th/nvim-cmp) - Auto Complete Setup
   <details> <summary>Dependencies</summary>
 
+  - [CMP_LuaSnip]('https://github.com/saadparwaiz1/cmp_luasnip') - Snippet Setup
+
+  - [Friendly-Snippets](https://github.com/rafamadriz/friendly-snippets) - More Snippets
+
   - [CMP-Nvim-LSP](https://github.com/hrsh7th/cmp-nvim-lsp) - LSP Setup
 
   - [CMP-Buffer](https://github.com/hrsh7th/cmp-buffer) - Buffer Setup
@@ -111,6 +115,7 @@ nvm use lts
 - [Vim-Illuminate](https://github.com/RRethy/vim-illuminate) - Highlight
 - [Dashboard-Nvim](https://github.com/nvimdev/dashboard-nvim) - Startup Screen
 - [Dial](https://github.com/monaqa/dial.nvim) - Improved Increment And Decrement
+- [Inc-Rename](https://github.com/smjonas/inc-rename.nvim) - Increment Renaming
 - [Incline](https://github.com/b0o/incline.nvim) - Floating statusline
 - [Noice](https://github.com/folke/noice.nvim) - UI For Messages, CMDLine, and Popmenu
   <details> <summary>Dependencies</summary>

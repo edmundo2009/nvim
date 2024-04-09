@@ -94,6 +94,11 @@ return {
         end
     },
     {
+		"smjonas/inc-rename.nvim",
+		-- cmd = "IncRename",
+		config = true,
+	},
+    {
         'glepnir/lspsaga.nvim', -- Tools
         config = function()
             require("lspsaga").setup({

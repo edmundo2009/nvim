@@ -165,6 +165,7 @@ return {
     },
     {
         'nvim-treesitter/nvim-treesitter', -- Highlight Colors
+        event = { "BufReadPost", "BufWritePost", "BufNewFile" },
         config = function()
             require("nvim-treesitter.configs").setup({
                 ensure_installed = {
@@ -263,6 +264,7 @@ return {
     },
     {
         'nvimtools/none-ls.nvim', -- Linter and Formatting
+        event = { "BufReadPost", "BufWritePost", "BufNewFile" },
         dependencies = 'nvimtools/none-ls-extras.nvim',
         config = function()
             local null_ls = require("null-ls")

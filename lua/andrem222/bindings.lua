@@ -78,10 +78,10 @@ keymap.set("n", "sj", "<C-w>j", { desc = "Move to Lower Window" })
 keymap.set("n", "sl", "<C-w>l", { desc = "Move to Right Window" })
 
 -- Resize panes
-keymap.set('n', '<C-A-j>', '<Cmd>vertical resize -4<CR>', { desc = "Resize Pane Left" })
-keymap.set('n', '<C-A-l>', '<Cmd>vertical resize +6<CR>', { desc = "Resize Pane Right" })
-keymap.set('n', '<C-A-k>', '<Cmd>res +6<CR>', { desc = "Resize Pane Up" })
-keymap.set('n', '<C-A-i>', '<Cmd>res -4<CR>', { desc = "Resize Pane Down" })
+keymap.set('n', '<C-A-h>', '<Cmd>vertical resize -4<CR>', { desc = "Resize Pane Left" })
+keymap.set('n', '<C-A-k>', '<Cmd>resize +4<CR>', { desc = "Resize Pane Up" })
+keymap.set('n', '<C-A-j>', '<Cmd>resize -4<CR>', { desc = "Resize Pane Down" })
+keymap.set('n', '<C-A-l>', '<Cmd>vertical resize +4<CR>', { desc = "Resize Pane Right" })
 
 -- DAP Bindings
 keymap.set('n', '<F10>', '<Cmd>DapContinue<CR>', { desc = "Debug Continue" })

@@ -294,10 +294,10 @@ return {
                     }),
                     require("none-ls.formatting.autopep8"),
 
-                    -- Diagnostics
-                    require("none-ls.code_actions.eslint_d").with({
-                        diagnostics_format = '[eslint] #{m}\n(#{c})'
-                    })
+                    -- -- Diagnostics
+                    -- require("none-ls.code_actions.eslint_d").with({
+                    --     diagnostics_format = '[eslint] #{m}\n(#{c})'
+                    -- })
                 }
             })
         end,

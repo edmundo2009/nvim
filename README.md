@@ -61,6 +61,8 @@ nvm use lts
   - [Plenary](https://github.com/nvim-lua/plenary.nvim) - Lua Files Setup
 
   - [Telescope-File-Browser](https://github.com/nvim-telescope/telescope-file-browser.nvim) - Browsing Setup
+
+  - [Telescope-UI-Select](https://github.com/nvim-telescope/telescope-ui-select.nvim) - Select UI Setup
   </details>
 
 - [Markdown Preview](https://github.com/iamcco/markdown-preview.nvim) - Live Markdown Preview

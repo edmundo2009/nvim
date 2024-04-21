@@ -4,6 +4,7 @@ return {
         'nvim-telescope/telescope.nvim', -- File Explorer
         dependencies = {
             "nvim-lua/plenary.nvim",
+            'nvim-telescope/telescope-ui-select.nvim',
             "nvim-telescope/telescope-file-browser.nvim"
         },
         config = function()
@@ -26,6 +27,7 @@ return {
                     }
                 },
                 extensions = {
+                    ["ui-select"] = { themes.get_dropdown({}) },
                     file_browser = {
                         theme = "dropdown",
                         hijack_netrw = true,
@@ -53,6 +55,7 @@ return {
             }
 
             telescope.load_extension("file_browser")
+            telescope.load_extension("ui-select")
 
             -- Bindings
             vim.api.nvim_create_user_command(

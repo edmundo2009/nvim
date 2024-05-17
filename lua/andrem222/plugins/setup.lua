@@ -42,6 +42,15 @@ return {
                     vim.api.nvim_buf_set_keymap(bufnr, ...)
                 end
 
+                if client.server_capabilities.inlayHintProvider then
+                    local inHints = vim.lsp.buf.inlay_hint or vim.lsp.inlay_hint
+                    if type(inHints) == "function" then
+                        inHints(bufnr, value)
+                    elseif type(inHints) == "table" and inHints.enable then
+                        inHints.enable(value, { bufnr = bufnr })
+                    end
+                end
+
                 -- Mappings
                 local opts = { noremap = true, silent = true }
 
@@ -61,7 +70,18 @@ return {
             -- TypeScript
             nvim_lsp.tsserver.setup({
                 on_attach = on_attach,
-                capabilities = capabilities
+                capabilities = capabilities,
+                init_options = {
+                    preferences = {
+                        includeInlayParameterNameHints = "all",
+                        includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+                        includeInlayFunctionParameterTypeHints = true,
+                        includeInlayVariableTypeHints = true,
+                        includeInlayPropertyDeclarationTypeHints = true,
+                        includeInlayFunctionLikeReturnTypeHints = true,
+                        includeInlayEnumMemberValueHints = true,
+                    },
+                },
             })
             -- C, C++
             nvim_lsp.clangd.setup({
@@ -295,9 +315,9 @@ return {
                     require("none-ls.formatting.autopep8"),
 
                     -- -- Diagnostics
-                    -- require("none-ls.code_actions.eslint_d").with({
-                    --     diagnostics_format = '[eslint] #{m}\n(#{c})'
-                    -- })
+                    require("none-ls.code_actions.eslint_d").with({
+                        diagnostics_format = '[eslint] #{m}\n(#{c})'
+                    })
                 }
             })
         end,

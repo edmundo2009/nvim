@@ -209,7 +209,8 @@ return {
                 },
                 highlight = {
                     enable = true,
-                    disable = {},
+                    disable = { "latex" },
+                    additional_vim_regex_highlighting = { "latex", "markdown" },
                 },
                 indent = {
                     enable = true,

@@ -97,6 +97,13 @@ return {
         end
     },
     {
+        'echasnovski/mini.surround',
+        version = '*',
+        config = function ()
+            require('mini.surround').setup()
+        end
+    },
+    {
 		"smjonas/inc-rename.nvim",
 		-- cmd = "IncRename",
 		config = true,
@@ -127,16 +134,6 @@ return {
         end,
     },
 
-    -- Preview
-    {
-        "iamcco/markdown-preview.nvim",
-        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-        build = "cd app && yarn install",
-        init = function()
-            vim.g.mkdp_filetypes = { "markdown" }
-        end,
-        ft = { "markdown" },
-    },
     {
         'mfussenegger/nvim-dap', -- Debbuger
         dependencies = {

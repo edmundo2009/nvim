@@ -1,20 +1,20 @@
-<h1>NVIM Dotfiles</h1>
+# NVIM Dotfiles
 
 [Back To Windows-Dotfiles <-](https://github.com/AndreM222/Windows-Dotfiles) (For Detailed Setup)
 
-<h2>Dependencies 📃</h2>
+## Dependencies 📃
 
-- Neovim >= 0.9.0 (needs to be built with LuaJIT)
+- Neovim >= 0.10.0 (needs to be built with LuaJIT)
 
 - Nerd Fonts >= 3.0
 
-<h2>Contents 📦</h2>
+## Contents 📦
 
 - Neovim Configuration
 
-<h2>Setup ⚒️</h2>
+## Setup ⚒️
 
-<h5>Package Managers 📦</h5>
+##### Package Managers 📦
 
 - [Python](https://www.python.org/) - `winget install python3` - <span style="opacity:30%">pip</span>
 
@@ -23,13 +23,14 @@
 - [Scoop](https://scoop.sh/) - `irm get.scoop.sh | iex` - <span style="opacity:30%">scoop</span>
 
 - [NVM | NodeJS](https://github.com/coreybutler/nvm-windows) - <span style="opacity:30%">npm</span>
+
 ```
 winget install CoreyButler.NVMforWindows
 nvm install lts
 nvm use lts
 ```
 
-<h5>Winget - Windows Installed</h5>
+##### Winget - Windows Installed
 
 - [Git](https://git-scm.com/download/win) - `winget install Git.Git`
 - [Sudo & Jq](https://winget.run/) - `winget install gsudo jqlang.jq`
@@ -45,11 +46,11 @@ nvm use lts
 - [RipGrep](https://github.com/BurntSushi/ripgrep) - `winget install BurntSushi.ripgrep.MSVC`
 - [LazyGit](https://github.com/jesseduffield/lazygit) - `winget install lazygit`
 
-<h5>Scoop - Needs Installation</h5>
+##### Scoop - Needs Installation
 
 - [Fira-Font](https://github.com/ryanoasis/nerd-fonts) - `scoop install FiraCode-NF-Mono`
 
-<h2>Neovim Plugins 📲</h2>
+## Neovim Plugins 📲
 
 - [Lualine](https://github.com/nvim-lualine/lualine.nvim) - Neovim Bar
 - [nvim-Web-Devicons](https://github.com/kyazdani42/nvim-web-devicons) - Icons
@@ -136,7 +137,7 @@ nvm use lts
   </details>
 
 
-<h2>Directory Structure 🗂️</h2>
+## Directory Structure 🗂️
 
 ```
 📂 $HOME/AppData/Local/Nvim
@@ -151,18 +152,20 @@ nvm use lts
 |__📄init.lua
 ```
 
-<h2>Languages 🗣️</h2>
+## Languages 🗣️
 <details>
 <summary>Completion, Format, Compiler, and Linter</summary>
-<h3>Servers 🗃️ <hr style="margin-top: 0"></h3>
 
-<h5>Winget - Windows Installed</h5>
+### Servers 🗃️
+---
+
+##### Winget - Windows Installed
 
 `C++` winget install clangd
 
 `Lua` winget install lua-language-server
 
-<h5>NodeJS - Needs Installation</h5>
+##### NodeJS - Needs Installation
 
 `Live-Server` npm install -g live-server
 
@@ -172,27 +175,29 @@ nvm use lts
 
 `Tailwind CSS` npm install -g tailwindcss-language-server
 
-<h5>Dotnet - Windows Installed</h5>
+##### Dotnet - Windows Installed
 
 `C-Sharp` dotnet tool install --global csharp-ls
 
-<h3>Format Languages 📄 <hr style="margin-top: 0"></h3>
+### Format Languages 📄
+---
 
 `C++` at the setup of llvm
 
-<h5>Pip - Needs Installation</h5>
+##### Pip - Needs Installation
 
 `Python` pip install --upgrade autopep8
 
-<h5>NodeJS - Needs Installation</h5>
+##### NodeJS - Needs Installation
 
 `Marksman` npm install -g marksman
 
 `Typescript` npm install -g prettier
 
-<h3>Compilers And Intrepeters ⚙️ <hr style="margin-top: 0"></h3>
+### Compilers And Intrepeters ⚙️
+---
 
-<h5>Winget - Windows Installed</h5>
+##### Winget - Windows Installed
 
 - [Python](https://www.python.org/) - At the installation of Python Package Manager
 
@@ -200,12 +205,12 @@ nvm use lts
 
 - [C++](https://winlibs.com/) - winget install -i LLVM.LLVM
 
-<h5>NodeJS - Needs Installation</h5>
+##### NodeJS - Needs Installation
 
 - [NodeJS](https://github.com/nvm-sh/nvm) - At the installation of NodeJS Package Manager
 </details>
 
-<h2>Info ℹ️</h2>
+## Info ℹ️
 
 Read: `To visualize on vim the keybindings press F3. I also documented all my custom bindings.`
 

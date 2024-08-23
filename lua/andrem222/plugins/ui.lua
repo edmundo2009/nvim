@@ -34,6 +34,7 @@ return {
                             cond = require("noice").api.statusline.mode.has,
                             color = { fg = "#ffb85c" },
                         },
+                        CopilotIcon(),
                         'encoding',
                         'fileformat',
                         'filetype'

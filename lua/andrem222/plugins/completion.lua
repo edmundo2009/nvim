@@ -45,7 +45,8 @@ return {
                 sources = cmp.config.sources({
                     { name = 'nvim_lsp' },
                     { name = 'buffer' },
-                    { name = 'luasnip' }
+                    { name = 'luasnip' },
+                    CopilotCMP()
                 }),
                 formatting = {
                     fields = { 'kind', 'abbr', 'menu' },
@@ -108,7 +109,8 @@ return {
                     Struct = "",
                     Event = "",
                     Operator = "",
-                    TypeParameter = ""
+                    TypeParameter = "",
+                    Copilot = ""
                 }
             })
         end

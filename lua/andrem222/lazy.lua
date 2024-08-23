@@ -12,29 +12,40 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    { import = "andrem222.plugins" },
-},
+    dev = { -- Import Plugins being developed
+        path = "A:/dev-plugins/",
+    },
 
-    {
-        dev = {
-            path = "A:/dev-plugins"
-        },
-        checker = { enable = true },
-        install = { colorscheme = { "dracula" } },
-        ui = { border = "single" },
-        performance = {
-            cache = { enabled = true },
-            rtp = {
-                -- disable some rtp plugins
-                disabled_plugins = {
-                    "gzip",
-                    "rplugin",
-                    "tarPlugin",
-                    "tohtml",
-                    "tutor",
-                    "zipPlugin",
-                    "netrwPlugin"
-                }
+    spec = {
+        {
+            -- This is a plugin folder which contains the requirements for the
+            -- plugins which are being developed
+            { import = "andrem222.pluginDev.Plugins" },
+
+            -- This is a plugin folder which contains what I used for my dev environment
+            { import = "andrem222.plugins" },
+        }
+    },
+
+    checker = { enable = true },
+
+    install = { colorscheme = { "dracula" } },
+
+    ui = { border = "single" },
+
+    performance = {
+        cache = { enabled = true },
+        rtp = {
+            -- disable some rtp plugins
+            disabled_plugins = {
+                "gzip",
+                "rplugin",
+                "tarPlugin",
+                "tohtml",
+                "tutor",
+                "zipPlugin",
+                "netrwPlugin"
             }
         }
-    })
+    }
+})

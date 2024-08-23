@@ -12,6 +12,9 @@ require('andrem222.config')
 -- Setup autocmd
 require('andrem222.autocmd')
 
+-- Setup Personal Plugins Settings
+require('andrem222.devconfig')
+
 -- Lazy setup and plugins
 require('andrem222.lazy')
 

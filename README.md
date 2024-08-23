@@ -18,8 +18,6 @@
 
 - [Python](https://www.python.org/) - `winget install python3` - <span style="opacity:30%">pip</span>
 
-- [Rust](https://www.rust-lang.org/) - `winget install Rustlang.Rust.GNU` - <span style="opacity:30%">cargo</span>
-
 - [Scoop](https://scoop.sh/) - `irm get.scoop.sh | iex` - <span style="opacity:30%">scoop</span>
 
 - [NVM | NodeJS](https://github.com/coreybutler/nvm-windows) - <span style="opacity:30%">npm</span>
@@ -30,22 +28,6 @@ nvm install lts
 nvm use lts
 ```
 
-##### Winget - Windows Installed
-
-- [Git](https://git-scm.com/download/win) - `winget install Git.Git`
-- [Sudo & Jq](https://winget.run/) - `winget install gsudo jqlang.jq`
-- [SQLite & MySQL](https://sqlite.org/index.html) - `winget install SQLite.SQLite`
-- [Neovim](https://winget.run/search?query=neovim) - `winget install Neovim`
-- [Oh-My-Posh](https://ohmyposh.dev/docs/installation/windows) - `winget install JanDeDobbeleer.OhMyPosh -s winget`
-- [Yarn](https://yarnpkg.com/) - `winget install Yarn.Yarn`
-- [Make](https://www.gnu.org/software/make/) - `winget install GnuWin32.Make`
-- [Fzf](https://github.com/junegunn/fzf) - `winget install fzf`
-- [Bat](https://github.com/sharkdp/bat) - `winget install sharkdp.bat`
-- [LazyDocker](https://github.com/jesseduffield/lazydocker) - `winget install lazydocker`
-- [NTop](https://github.com/gsass1/NTop) - `winget install ntop`
-- [RipGrep](https://github.com/BurntSushi/ripgrep) - `winget install BurntSushi.ripgrep.MSVC`
-- [LazyGit](https://github.com/jesseduffield/lazygit) - `winget install lazygit`
-
 ##### Scoop - Needs Installation
 
 - [Fira-Font](https://github.com/ryanoasis/nerd-fonts) - `scoop install FiraCode-NF-Mono`
@@ -53,8 +35,17 @@ nvm use lts
 ## Neovim Plugins 📲
 
 - [Lualine](https://github.com/nvim-lualine/lualine.nvim) - Neovim Bar
+- [copilot](https://github.com/zbirenbaum/copilot.lua) - Copilot
+  <details> <summary>Dependencies</summary>
+
+  - [Copilot-Lualine](https://github.com/AndreM222/copilot-lualine) - Copilot Status Setup
+
+  - [Copilot-CMP](https://github.com/hrsh7th/cmp-copilot) - Copilot Setup
+  </details>
+
 - [nvim-Web-Devicons](https://github.com/kyazdani42/nvim-web-devicons) - Icons
 - [Nvim-Tree](https://github.com/kyazdani42/nvim-tree.lua) - Neovim Tree
+- [Mini.Surround](https://github.com/echasnovski/mini.surround) - Sorround Selection With Desired Character
 - [LSPConfig](https://github.com/neovim/nvim-lspconfig) - Keys Configuration
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim) - Telescope
   <details> <summary>Dependencies</summary>
@@ -142,11 +133,14 @@ nvm use lts
 ```
 📂 $HOME/AppData/Local/Nvim
 |__📂lua/andrem222
+|   |__📂 pluginDev
+|   |   |__📑 All Personal Plugin Installation and Setup Files
 |   |__📂 plugins
-|       |__📑 All Plugin Installation and Setup Files
+|   |   |__📑 All Plugin Installation and Setup Files
 |   |__📄bindings.lua
 |   |__📄config.lua
 |   |__📄debug.lua
+|   |__📄devconfig.lua
 |   |__📄lazy.lua
 |   |__📄theme.lua
 |__📄init.lua
@@ -389,7 +383,15 @@ Problem: `C++ compiler not working`
 Fix:
 ```
 When installing LLVM choose add to path.
-Also be use to be using clang if you are using LLVM
+Also be use clang if you are using LLVM
+```
+
+Problem: `Markdown-Preview not installing`
+
+Fix:
+```
+In case of not installing. You can go directly to the installed plugins
+folder, and run the installer manually.
 ```
 
 </details>

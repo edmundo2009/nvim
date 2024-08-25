@@ -1,16 +1,22 @@
 # NVIM Dotfiles
 
+## Contents 📦
+
+- Neovim Configuration
+
+## Navigation ✈️
+
 [Back To Windows-Dotfiles <-](https://github.com/AndreM222/Windows-Dotfiles) (For Detailed Setup)
+
+- [Navigate To Powershell Dotfiles <-](https://github.com/AndreM222/PowerShell) (For Detailed Setup)
+
+- [Navigate To Dotfile Automizer <-](https://github.com/AndreM222/Dotfile-Automizer) (For Detailed Setup)
 
 ## Dependencies 📃
 
 - Neovim >= 0.10.0 (needs to be built with LuaJIT)
 
 - Nerd Fonts >= 3.0
-
-## Contents 📦
-
-- Neovim Configuration
 
 ## Setup ⚒️
 

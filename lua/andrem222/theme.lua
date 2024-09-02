@@ -30,7 +30,10 @@ dracula.setup({
         -- Search
         IncSearch = { bg = "#957251" },
         CurSearch = { bg = "#957251" },
-        Search = { bg = dracula.colors().selection },
+        Search = { bg = dracula.colors().selection }, -- Also changes the noice progress
+
+        -- Noice Progress -- Using this since separating search and noice progress from each other
+        NoiceFormatProgressDone = { bg = dracula.colors().orange },
 
         -- Extra
         CursorLineNr = { fg = "Orange" },
@@ -51,10 +54,7 @@ dracula.setup({
         DashboardFooter = { fg = "#ffffff" },
 
         -- Bufferline
-        BufferLineSeparator = { fg = dracula.colors().bg },
-
-        -- Noice Beautify
-        NoiceFormatProgressDone = { bg = dracula.colors().orange }
+        BufferLineSeparator = { fg = dracula.colors().bg }
     },
 
     transparent_bg = true,

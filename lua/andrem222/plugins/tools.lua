@@ -145,13 +145,13 @@ return {
             local dapui = require("dapui")
 
             dapui.setup()
-            require("nvim-dap-virtual-text").setup()
+            require("nvim-dap-virtual-text").setup({})
 
-            vim.fn.sign_define('DapBreakpoint', { text = '', texthl = 'DapUIStop' })
-            vim.fn.sign_define('DapBreakpointCondition', { text = '', texthl = 'DapUIConditionOutline' })
-            vim.fn.sign_define('DapLogPoint', { text = '', texthl = 'DapUILogOutline' })
-            vim.fn.sign_define('DapStopped', { text = '', texthl = 'DapUIThread' })
-            vim.fn.sign_define('DapBreakpointRejected', { text = '󰜺', texthl = 'DapUIStop' })
+            vim.fn.sign_define('DapBreakpoint', { text = '', texthl = 'DiagnosticError' })
+            vim.fn.sign_define('DapBreakpointCondition', { text = '', texthl = 'DiagnosticWarn' })
+            vim.fn.sign_define('DapLogPoint', { text = '', texthl = 'DiagnosticInfo' })
+            vim.fn.sign_define('DapStopped', { text = '', texthl = 'DiagnosticOk' })
+            vim.fn.sign_define('DapBreakpointRejected', { text = '󰜺', texthl = 'DiagnosticError' })
 
             dap.listeners.after.event_initialized["dapui_config"] = function()
                 dapui.open()

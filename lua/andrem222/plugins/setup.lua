@@ -89,6 +89,12 @@ return {
                 capabilities = capabilities
             })
 
+            -- Markdown
+            nvim_lsp.marksman.setup({
+                on_attach = on_attach,
+                capabilities = capabilities
+            })
+
             -- C#
             nvim_lsp.csharp_ls.setup({
                 cmd = { "csharp-ls" },
@@ -138,6 +144,12 @@ return {
 
             -- Python
             nvim_lsp.pyright.setup({
+                on_attach = on_attach,
+                capabilities = capabilities
+            })
+
+            -- Go
+            nvim_lsp.gopls.setup({
                 on_attach = on_attach,
                 capabilities = capabilities
             })
@@ -205,6 +217,7 @@ return {
                     "python",
                     "javascript",
                     "vimdoc",
+                    "go",
                     "regex"
                 },
                 highlight = {
@@ -264,6 +277,8 @@ return {
                     "vimls",
                     "csharp_ls",
                     "tailwindcss",
+                    "marksman",
+                    "gopls",
                     "cssls",
                     (function()
                         if (os.getenv("WINDIR") and not os.getenv("WSL_INTEROP")) then

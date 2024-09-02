@@ -24,10 +24,6 @@ dracula.setup({
         VertSplit = { fg = dracula.colors().comment },
         WinSeparator = { fg = dracula.colors().comment },
 
-        Label = { fg = dracula.colors().pink },
-        Identifier = { fg = dracula.colors().fg },
-        MatchParen = { fg = dracula.colors().green, underline = true },
-
         -- Missing fg color and extra setup
         IblScope = { fg = dracula.colors().comment, nocombine = true },
 
@@ -38,16 +34,6 @@ dracula.setup({
 
         -- Extra
         CursorLineNr = { fg = "Orange" },
-
-        -- Variable
-        Function = { fg = dracula.colors().green },
-        Number = { fg = dracula.colors().purple },
-        Directory = { fg = dracula.colors().purple },
-        Constant = { fg = dracula.colors().purple },
-        ['@variable'] = { fg = dracula.colors().purple, },
-
-        -- Completion text
-        Pmenu = { fg = dracula.colors().fg, bg = dracula.colors().menu },
 
         -- Saga Separator
         SagaWinbarSep = { fg = dracula.colors().comment },
@@ -64,17 +50,11 @@ dracula.setup({
         DashboardHeader = { fg = "#ffffff" },
         DashboardFooter = { fg = "#ffffff" },
 
-        Special = { fg = dracula.colors().green },
-
-        -- DAP
-        DapUIConditionOutline = { fg = dracula.colors().orange},
-        DapLogPoint = { fg = dracula.colors().cyan },
-
         -- Bufferline
         BufferLineSeparator = { fg = dracula.colors().bg },
 
         -- Noice Beautify
-        NoiceFormatProgressDone = { bg = dracula.colors().orange },
+        NoiceFormatProgressDone = { bg = dracula.colors().orange }
     },
 
     transparent_bg = true,

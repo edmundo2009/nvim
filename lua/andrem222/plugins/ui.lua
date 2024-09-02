@@ -79,7 +79,7 @@ return {
                     shortcut = {
                         {
                             desc = ' Files',
-                            group = 'Label',
+                            group = '@operator',
                             action = 'BrowseFiles',
                             key = 'f',
                         },
@@ -91,7 +91,7 @@ return {
                         },
                         {
                             desc = ' Dotfiles',
-                            group = 'Number',
+                            group = '@property',
                             action = 'Telescope file_browser cwd=' .. vim.fn.stdpath("config") .. "/lua/andrem222", -- Change to your dotfiles path
                             key = 'd',
                         },

@@ -13,7 +13,13 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     dev = { -- Import Plugins being developed
-        path = "A:/dev-plugins/",
+        path = function()
+            if (os.getenv("WINDIR") and not os.getenv("WSL_INTEROP")) then
+                return "A:/dev-plugins/"
+            end
+
+            return "~/dev-plugins/"
+        end
     },
 
     spec = {

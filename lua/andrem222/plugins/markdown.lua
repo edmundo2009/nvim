@@ -1,4 +1,8 @@
 return {
+    {
+        "lervag/vimtex",
+        lazy = false     -- we don't want to lazy load VimTeX
+    },
     -- Markdown Previewer
     {
         "OXY2DEV/markview.nvim",

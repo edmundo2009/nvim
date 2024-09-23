@@ -115,3 +115,6 @@ keymap.set({ '!', '' }, '<C-A-a>', '<Esc> ggVG', { desc = "Select All" })
 
 -- Deselect
 keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
+
+-- Terminal
+keymap.set('t', "<esc>", "<C-\\><C-n>", { desc = "Exit Terminal Mode" })

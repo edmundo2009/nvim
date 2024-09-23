@@ -68,7 +68,7 @@ return {
 
 
             -- TypeScript
-            nvim_lsp.tsserver.setup({
+            nvim_lsp.ts_ls.setup({
                 on_attach = on_attach,
                 capabilities = capabilities,
                 init_options = {
@@ -91,6 +91,13 @@ return {
 
             -- Markdown
             nvim_lsp.marksman.setup({
+                on_attach = on_attach,
+                capabilities = capabilities
+            })
+
+            -- LaTeX
+            nvim_lsp.texlab.setup({
+                cmd = { "csharp-ls" },
                 on_attach = on_attach,
                 capabilities = capabilities
             })
@@ -166,6 +173,12 @@ return {
                 capabilities = capabilities
             })
 
+            -- Nim
+            nvim_lsp.nim_langserver.setup({
+                on_attach = on_attach,
+                capabilities = capabilities
+            })
+
             -- TailwindCSS
             nvim_lsp.tailwindcss.setup({
                 on_attach = on_attach,
@@ -206,6 +219,7 @@ return {
                     "tsx",
                     "toml",
                     "php",
+                    "nim",
                     "json",
                     "yaml",
                     "css",
@@ -213,6 +227,7 @@ return {
                     "lua",
                     "cpp",
                     "c",
+                    "latex",
                     "c_sharp",
                     "python",
                     "javascript",
@@ -222,7 +237,6 @@ return {
                 },
                 highlight = {
                     enable = true,
-                    disable = { "latex" },
                     additional_vim_regex_highlighting = { "latex", "markdown" },
                 },
                 indent = {
@@ -266,6 +280,7 @@ return {
 
 
 
+            require'lspconfig'.texlab.setup{}
             -- Setup lspconfig on mason
             require("mason-lspconfig").setup({
                 ensure_installed = {
@@ -273,7 +288,9 @@ return {
                     "html",
                     "lua_ls",
                     "pyright",
-                    "tsserver",
+                    "ts_ls",
+                    "nim_langserver",
+                    "texlab",
                     "vimls",
                     "csharp_ls",
                     "tailwindcss",
@@ -325,9 +342,11 @@ return {
                                 }
                         end,
                     }),
+
                     null_ls.builtins.formatting.clang_format.with({
                         extra_args = { "--style", "Microsoft" }
                     }),
+
                     require("none-ls.formatting.autopep8"),
 
                     -- -- Diagnostics

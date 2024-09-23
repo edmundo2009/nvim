@@ -100,7 +100,11 @@ return {
         'echasnovski/mini.surround',
         version = '*',
         config = function ()
-            require('mini.surround').setup()
+            require('mini.surround').setup({
+                mappings = {
+                    highlight = '', -- Highlight surrounding
+                },
+            })
         end
     },
     {

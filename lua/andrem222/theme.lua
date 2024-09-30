@@ -6,7 +6,6 @@ dracula.setup({
 
     overrides = {
         -- Hide buffers
-        EndOfBuffer = { fg = "#282A36" },
         BufferLineFill = { bg = "NONE" },
 
         -- Diagnostics
@@ -57,8 +56,8 @@ dracula.setup({
         BufferLineSeparator = { fg = dracula.colors().bg }
     },
 
+    show_end_of_buffer = true, -- Needed for markview
     transparent_bg = true,
-    show_end_of_buffer = true -- Enable for setup of true transparency
 })
 
 vim.cmd('colorscheme dracula')

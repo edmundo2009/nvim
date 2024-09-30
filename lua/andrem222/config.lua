@@ -3,7 +3,7 @@ vim.opt.termguicolors = true
 vim.opt.winblend = 0
 vim.opt.wildoptions = 'pum'
 vim.opt.pumblend = 10
-vim.opt.fillchars = { eob = '-' }
+vim.opt.fillchars = { eob = ' ' }
 
 vim.opt.encoding = 'utf-8'
 vim.scriptencoding = 'utf-8'

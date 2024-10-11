@@ -59,6 +59,8 @@ if (os.getenv("WINDIR") and not os.getenv("WSL_INTEROP")) then
     vim.opt.shellpipe = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
     vim.opt.shellquote = ""
     vim.opt.shellxquote = ""
+else
+    vim.opt.shell = os.getenv('SHELL')
 end
 
 -- Folding Setup

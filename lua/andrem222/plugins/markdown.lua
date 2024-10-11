@@ -10,8 +10,6 @@ return {
         ft = {"markdown", "tex"}, -- If you decide to lazy-load anyway
         config = function ()
 
-            local colors = require("markview.colors");
-
             require("markview").setup({
                 modes = { "n", "i", "no", "c" },
                 hybrid_modes = { "i", "n" },
@@ -36,10 +34,6 @@ return {
                 links = {
                     enable = true,
 
-                    hyperlinks = {
-                        icon = " ",
-                        hl = "MarkviewHyperlink",
-                    },
                     images = {
                         icon = " ",
                         hl = "MarkviewImageLink",
@@ -47,41 +41,53 @@ return {
                 },
                 highlight_groups = {
                     {
-                        group_name = "MarkviewHeading1Corner",
-                        value = function ()
-                            return { fg = colors.get_hl_value(0, "MarkviewHeading1", "bg") };
+                        output = function (hl)
+                            return {
+                                group_name = "MarkviewHeading1Corner",
+                                value = { fg = hl.hex(hl.color("bg", {  "MarkviewHeading1" }, nil, nil)) }
+                            }
                         end
                     },
                     {
-                        group_name = "MarkviewHeading2Corner",
-                        value = function ()
-                            return { fg = colors.get_hl_value(0, "MarkviewHeading2", "bg") };
+                        output = function (hl)
+                            return {
+                                group_name = "MarkviewHeading2Corner",
+                                value = { fg = hl.hex(hl.color("bg", {  "MarkviewHeading2" }, nil, nil)) }
+                            }
                         end
                     },
                     {
-                        group_name = "MarkviewHeading3Corner",
-                        value = function ()
-                            return { fg = colors.get_hl_value(0, "MarkviewHeading3", "bg") };
+                        output = function (hl)
+                            return {
+                                group_name = "MarkviewHeading3Corner",
+                                value = { fg = hl.hex(hl.color("bg", {  "MarkviewHeading3" }, nil, nil)) }
+                            }
                         end
                     },
                     {
-                        group_name = "MarkviewHeading4Corner",
-                        value = function ()
-                            return { fg = colors.get_hl_value(0, "MarkviewHeading4", "bg") };
+                        output = function (hl)
+                            return {
+                                group_name = "MarkviewHeading4Corner",
+                                value = { fg = hl.hex(hl.color("bg", {  "MarkviewHeading4" }, nil, nil)) }
+                            }
                         end
                     },
                     {
-                        group_name = "MarkviewHeading5Corner",
-                        value = function ()
-                            return { fg = colors.get_hl_value(0, "MarkviewHeading5", "bg") };
+                        output = function (hl)
+                            return {
+                                group_name = "MarkviewHeading5Corner",
+                                value = { fg = hl.hex(hl.color("bg", {  "MarkviewHeading5" }, nil, nil)) }
+                            }
                         end
                     },
                     {
-                        group_name = "MarkviewHeading6Corner",
-                        value = function ()
-                            return { fg = colors.get_hl_value(0, "MarkviewHeading6", "bg") };
+                        output = function (hl)
+                            return {
+                                group_name = "MarkviewHeading6Corner",
+                                value = { fg = hl.hex(hl.color("bg", {  "MarkviewHeading6" }, nil, nil)) }
+                            }
                         end
-                    },
+                    }
                 },
                 headings = {
                     enable = true,

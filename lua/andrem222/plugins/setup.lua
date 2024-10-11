@@ -141,6 +141,12 @@ return {
                     on_attach = on_attach,
                     capabilities = capabilities
                 })
+
+                -- Fish
+                nvim_lsp.fish_lsp.setup({
+                    on_attach = on_attach,
+                    capabilities = capabilities
+                })
             end
 
             -- HTML
@@ -233,7 +239,13 @@ return {
                     "javascript",
                     "vimdoc",
                     "go",
-                    "regex"
+                    "regex",
+                    (function()
+                        if (os.getenv("WINDIR") and not os.getenv("WSL_INTEROP")) then
+                            return "powershell"
+                        end
+                        return "fish"
+                    end)()
                 },
                 highlight = {
                     enable = true,

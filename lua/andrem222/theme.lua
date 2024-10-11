@@ -53,7 +53,22 @@ dracula.setup({
         DashboardFooter = { fg = "#ffffff" },
 
         -- Bufferline
-        BufferLineSeparator = { fg = dracula.colors().bg }
+        BufferLineSeparator = { fg = dracula.colors().bg },
+
+        -- Markview
+        ['@markup.heading.1.markdown'] = { link = 'rainbowcol1' },
+		['@markup.heading.2.markdown'] = { link = 'rainbowcol2' },
+		['@markup.heading.3.markdown'] = { link = 'rainbowcol3' },
+		['@markup.heading.4.markdown'] = { link = 'rainbowcol4' },
+		['@markup.heading.5.markdown'] = { link = 'rainbowcol5' },
+		['@markup.heading.6.markdown'] = { link = 'rainbowcol6' },
+
+        markdownH1 = { link = "rainbow1" },
+		markdownH2 = { link = "rainbow2" },
+		markdownH3 = { link = "rainbow3" },
+		markdownH4 = { link = "rainbow4" },
+		markdownH5 = { link = "rainbow5" },
+		markdownH6 = { link = "rainbow6" }
     },
 
     show_end_of_buffer = true, -- Needed for markview

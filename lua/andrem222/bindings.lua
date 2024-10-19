@@ -20,13 +20,6 @@ keymap.set('n', '<Home>', '<Cmd>Lazy<CR>', { silent = true }, { desc = "Open Laz
 keymap.set('n', '<F6>', '<Cmd>LspInfo<CR>', { silent = true }, { desc = "LSP Info" })
 keymap.set('n', '<F7>', '<Cmd>NullLsInfo<CR>', { silent = true }, { desc = "NullLS Info" })
 
--- Saving Bindings
-keymap.set({ '!', '' }, '<C-s>', '<Esc><Cmd>w<CR>', { silent = true }, { desc = "Save" })
-keymap.set({ '!', '' }, '<C-A-s>', '<Esc><Cmd>wa<CR>', { silent = true }, { desc = "Save All" })
-keymap.set({ '!', '' }, '<A-w>', '<Esc><Cmd>wqa<CR>', { desc = "Save All and Quit" })
-keymap.set({ '!', '' }, '<A-q>', '<Esc><Cmd>q!<CR>', { desc = "Quit" })
-keymap.set({ '!', '' }, '<C-A-q>', '<Esc><Cmd>qa!<CR>', { desc = "Quit All" })
-
 -- Moving Selections
 keymap.set({ 'n', 'i' }, '<A-Down>', '<Esc>:m .+1<CR>==', { silent = true }, { desc = "Move Selection Down" })
 keymap.set({ 'n', 'i' }, '<A-Up>', '<Esc>:m .-2<CR>==', { silent = true }, { desc = "Move Selection Up" })
@@ -88,12 +81,12 @@ keymap.set('n', '<F10>', '<Cmd>DapContinue<CR>', { desc = "Debug Continue" })
 keymap.set('n', '<F11>', '<Cmd>DapStepOver<CR>', { desc = "Debug Step Over" })
 keymap.set('n', '<F12>', '<Cmd>DapStepInto<CR>', { desc = "Debug Step Into" })
 keymap.set('n', '<F13>', '<Cmd>DapStepOut<CR>', { desc = "Debug Step Out" })
-keymap.set('n', 'b', '<Cmd>DapToggleBreakpoint<CR>', { desc = "Toggle Breakpoint" })
-keymap.set('n', 'B', [[<Cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))()<CR>]],
+keymap.set('n', '\\bb', '<Cmd>DapToggleBreakpoint<CR>', { desc = "Toggle Breakpoint" })
+keymap.set('n', '\\bc', [[<Cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))()<CR>]],
     { desc = "Toggle Conditional Breakpoint" })
-keymap.set('n', 'lp', [[<Cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>]],
+keymap.set('n', '\\bl', [[<Cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>]],
     { desc = "Toggle Log Point Breakpoint" })
-keymap.set('n', 'dr', [[<Cmd>lua require'dapui'.toggle()<CR>]], { desc = "Toggle Debug UI" })
+keymap.set('n', '\\bu', [[<Cmd>lua require'dapui'.toggle()<CR>]], { desc = "Toggle Debug UI" })
 
 -- Copy and Delete Bindings
 keymap.set("x", "\\p", [["_dP]], { desc = "Paste Without Copying" })
@@ -109,9 +102,6 @@ keymap.set('n', '<A-->', '<Cmd>CloseAllFolds<CR>', { desc = "Close All Folds" })
 -- Ctrl Movement
 keymap.set({ 'n', 'v' }, '<C-Right>', 'E', { desc = "Move to End of Word" })
 keymap.set('i', '<C-Right>', '<C-o>E<Right>', { desc = "Move to End of Word" })
-
--- Select all
-keymap.set({ '!', '' }, '<C-A-a>', '<Esc> ggVG', { desc = "Select All" })
 
 -- Deselect
 keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })

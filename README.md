@@ -239,16 +239,6 @@ Read: `To visualize on vim the keybindings press F3. I also documented all my cu
 
 `F6` - Null-LS Status
 
-`Ctrl - s` - Save
-
-`Ctrl - Alt - s` Save All
-
-`Alt - w` - Save And Quit All
-
-`Alt - q` - Force Quit
-
-`Ctrl - Alt - q` - Force Quit All
-
 `Alt - Up` - Move Line | Block up
 
 `Alt - Down` - Move Line | Block Down
@@ -305,13 +295,13 @@ Read: `To visualize on vim the keybindings press F3. I also documented all my cu
 
 `F12` - Debugger Step Out
 
-`b` - Debugger Breakpoint
+`\ + b + b` - Debugger Breakpoint
 
-`B` - Debugger Breakpoint With Conditions
+`\ + b + c` - Debugger Breakpoint With Conditions
 
-`l + p` - Debugger Breakpoint With Log Message
+`\ + b + l` - Debugger Breakpoint With Log Message
 
-`d + r` - Debugger Toggle
+`\ + b + u` - Debugger Toggle
 
 `Alt - =` - Open Fold All
 
@@ -324,8 +314,6 @@ Read: `To visualize on vim the keybindings press F3. I also documented all my cu
 `CTRL - /` - Comment Line In Line
 
 `CTRL - Alt - /` - Comment BLock
-
-`CTRL - Shift - a` - Select All
 
 `Esc` - Clear hlsearch
 

@@ -55,18 +55,28 @@ return {
             })
         end
     },
+
     { 'kyazdani42/nvim-web-devicons' },                      -- Icons
+
     { "lukas-reineke/indent-blankline.nvim", main = "ibl" }, -- Indent Line
+
     {
         'Mofiqul/dracula.nvim',                              -- Theme
         lazy = true,
         priority = 1000,
     },
+
     {
         'glepnir/dashboard-nvim', -- Menu Screen
         config = function()
             require("dashboard").setup({
                 config = {
+                    project = {
+                        label = ' '..Msgstr('Recent Projects:')
+                    },
+                    mru = {
+                        label = ' '..Msgstr('Most Recent Files:')
+                    },
                     header = {
                         ' ███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗',
                         ' ████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║',
@@ -78,25 +88,25 @@ return {
                     },
                     shortcut = {
                         {
-                            desc = ' Files',
+                            desc = ' '..Msgstr('Files'),
                             group = '@operator',
                             action = 'BrowseFiles',
                             key = 'f',
                         },
                         {
-                            desc = ' Keymaps',
+                            desc = ' '..Msgstr('Keymaps'),
                             group = 'DiagnosticHint',
                             action = 'Telescope keymaps',
                             key = 'k',
                         },
                         {
-                            desc = ' Dotfiles',
+                            desc = ' '..Msgstr('Dotfiles'),
                             group = '@property',
                             action = 'Telescope file_browser cwd=' .. vim.fn.stdpath("config") .. "/lua/andrem222", -- Change to your dotfiles path
                             key = 'd',
                         },
                         {
-                            desc = '󰝒 New File',
+                            desc = '󰝒 '..Msgstr('New File'),
                             group = 'DiagnosticWarn',
                             action = 'ene ',
                             key = 'e',
@@ -111,7 +121,9 @@ return {
             })
         end
     },
+
     { 'rrethy/vim-illuminate' }, -- Highlight
+
     {
         "kevinhwang91/nvim-ufo", -- Aesthetic Folding
         dependencies = { "kevinhwang91/promise-async" },
@@ -231,7 +243,7 @@ return {
                         },
                         opts = { skip = true },
                     },
-                },
+                }
             })
         end
     },

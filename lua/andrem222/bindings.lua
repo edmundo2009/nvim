@@ -1,24 +1,19 @@
 local keymap = vim.keymap
 
 -- Telescope Bindings
-keymap.set('n', '\\t', '<Cmd>BrowseFiles<CR>', { silent = true, desc = Msgstr("Browse Files") })
-keymap.set('n', '\\r', '<Cmd>ResumeSearch<CR>', { silent = true, desc = Msgstr("Resume Search") })
-keymap.set('n', '\\f', '<Cmd>FileParse<CR>', { silent = true, desc = Msgstr("File Parse") })
+keymap.set('n', '\\t', '<Cmd>Telescope file_browser<CR>', { silent = true, desc = Msgstr("Browse Files") })
+keymap.set('n', '\\r', '<Cmd>Telescope resume<CR>', { silent = true, desc = Msgstr("Resume Search") })
+keymap.set('n', '\\f', '<Cmd>Telescope find_files<CR>', { silent = true, desc = Msgstr("File Parse") })
 keymap.set('n', '\\l', '<cmd>Telescope live_grep<cr>', { silent = true, desc = Msgstr("Live Grep") })
 keymap.set('n', '\\w', '<Cmd>Telescope diagnostics<CR>', { silent = true, desc = Msgstr("Show Diagnostics") })
 keymap.set('n', '\\g', '<Cmd>Telescope git_status<CR>', { silent = true, desc = Msgstr("Git Status") })
 keymap.set('n', '\\\\', '<Cmd>Telescope buffers<CR>', { silent = true, desc = Msgstr("Show Buffers") })
 keymap.set('n', '<F3>', '<Cmd>Telescope help_tags<CR>', { silent = true, desc = Msgstr("Show Help Tags") })
 keymap.set('n', '<F4>', '<Cmd>Telescope keymaps<CR>', { silent = true, desc = Msgstr("Show Keymaps") })
-keymap.set('n', '<F5>', '<Cmd>Telescope notify<CR>', { silent = true, desc = Msgstr("Show Notifications") })
 
 -- Installations
 keymap.set('n', '<S-Home>', '<Cmd>Mason<CR>', { silent = true, desc = Msgstr("Open Mason") })
 keymap.set('n', '<Home>', '<Cmd>Lazy<CR>', { silent = true, desc = Msgstr("Open Lazy") })
-
--- Status
-keymap.set('n', '<F6>', '<Cmd>LspInfo<CR>', { silent = true, desc = Msgstr("LSP Info") })
-keymap.set('n', '<F7>', '<Cmd>NullLsInfo<CR>', { silent = true, desc = Msgstr("NullLS Info") })
 
 -- Moving Selections
 keymap.set({ 'n', 'i' }, '<A-Down>', '<Esc>:m .+1<CR>==', { silent = true, desc = Msgstr("Move Selection Down") })

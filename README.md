@@ -270,10 +270,6 @@ Read: `To visualize on vim the keybindings press F3. I also documented all my cu
 
 `F3` - Telescope Keymaps
 
-`F5` - Lsp Status
-
-`F6` - Null-LS Status
-
 `Alt - Up` - Move Line | Block up
 
 `Alt - Down` - Move Line | Block Down

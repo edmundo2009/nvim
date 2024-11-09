@@ -26,11 +26,67 @@ return {
                         }
                     }
                 },
+
+                pickers = {
+                    git_status = {
+                        prompt_title = Msgstr("Git Status"),
+                        results_title = Msgstr("Results"),
+                        preview_title = Msgstr("Grep Preview")
+                    },
+
+                    buffers = {
+                        prompt_title = Msgstr("Buffers"),
+                        results_title = Msgstr("Results"),
+                        preview_title = Msgstr("Grep Preview")
+                    },
+
+                    diagnostics = {
+                        prompt_title = Msgstr("Workspace Diagnostics"),
+                        results_title = Msgstr("Results"),
+                        preview_title = Msgstr("Grep Preview")
+                    },
+
+                    help_tags = {
+                        prompt_title = Msgstr("Help"),
+                        results_title = Msgstr("Results"),
+                        preview_title = Msgstr("Grep Preview")
+                    },
+
+                    keymaps = {
+                        prompt_title = Msgstr("Key Maps"),
+                        results_title = Msgstr("Results"),
+                        preview_title = Msgstr("Grep Preview")
+                    },
+
+                    live_grep = {
+                        prompt_title = Msgstr("Live Grep"),
+                        results_title = Msgstr("Results"),
+                        preview_title = Msgstr("Grep Preview")
+                    },
+
+                    find_files = {
+                        prompt_title = Msgstr("Find Files"),
+                        results_title = Msgstr("Results"),
+                        preview_title = Msgstr("Grep Preview"),
+                        no_ignore = false,
+                        hidden = true
+                    }
+                },
                 extensions = {
                     ["ui-select"] = { themes.get_dropdown({}) },
+
                     file_browser = {
                         theme = "dropdown",
+                        path = "%:p:h",
+                        cwd = telescope_buffer_dir(),
+                        respect_gitignore = false,
+                        hidden = true,
+                        grouped = true,
+                        previewer = false,
+                        initial_mode = "normal",
+                        layout_config = { height = 40 },
                         hijack_netrw = true,
+                        prompt_title = Msgstr("File Browser"),
                         mappings = {
                             -- Insert
                             ["i"] = {
@@ -56,46 +112,9 @@ return {
 
             telescope.load_extension("file_browser")
             telescope.load_extension("ui-select")
-
-            -- Bindings
-            vim.api.nvim_create_user_command(
-                "FileParse",
-                function()
-                    builtin.find_files({
-                        no_ignore = false,
-                        hidden = true
-                    })
-                end,
-                { nargs = 0 }
-            )
-
-
-            vim.api.nvim_create_user_command(
-                "ResumeSearch",
-                function()
-                    builtin.resume()
-                end,
-                { nargs = 0 }
-            )
-
-            vim.api.nvim_create_user_command(
-                "BrowseFiles",
-                function()
-                    telescope.extensions.file_browser.file_browser({
-                        path = "%:p:h",
-                        cwd = telescope_buffer_dir(),
-                        respect_gitignore = false,
-                        hidden = true,
-                        grouped = true,
-                        previewer = false,
-                        initial_mode = "normal",
-                        layout_config = { height = 40 }
-                    })
-                end,
-                { nargs = 0 }
-            )
         end
     },
+
     {
         'echasnovski/mini.surround',
         version = '*',
@@ -109,7 +128,6 @@ return {
     },
     {
 		"smjonas/inc-rename.nvim",
-		-- cmd = "IncRename",
 		config = true,
 	},
     {

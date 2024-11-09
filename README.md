@@ -139,6 +139,8 @@ nvm use lts
 ```
 📂 $HOME/AppData/Local/Nvim
 |__📂lua/andrem222
+|   |__📂 lang
+|   |   |__📑 All Translations Files
 |   |__📂 pluginDev
 |   |   |__📑 All Personal Plugin Installation and Setup Files
 |   |__📂 plugins
@@ -147,6 +149,7 @@ nvm use lts
 |   |__📄config.lua
 |   |__📄debug.lua
 |   |__📄devconfig.lua
+|   |__📄langMSG.lua
 |   |__📄lazy.lua
 |   |__📄theme.lua
 |__📄init.lua
@@ -222,6 +225,25 @@ If no language available or translation than it will setup the default message.
 > [!WARNING]
 > Japanese is still now available. Will be coming as soon as I finish learning sufficient
 > to bring a well translated configuration.
+
+Format for translations:
+```json
+    "Message to print (message Id)": {
+        "msgstr (Translated message/Id)": "",
+        "details (Extra Information: not needed)": {
+            "path (Where the message is)": "../bindings.lua:18",
+            "group (Scope)": "Telescope Bindings"
+        }
+    },
+
+```
+
+Location of translation files:
+```
+📂 $HOME/AppData/Local/Nvim/lua/andrem222/lang
+|__📑 All Translations Files
+```
+
 
 ## Info ℹ️
 

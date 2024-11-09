@@ -6,7 +6,7 @@ if file then
 
     jsonFile = vim.json.decode(file:read("*a"))
 
-file:close()
+    file:close()
 
 end
 

@@ -210,6 +210,19 @@ nvm use lts
 - [NodeJS](https://github.com/nvm-sh/nvm) - At the installation of NodeJS Package Manager
 </details>
 
+## Translations 🌐
+
+Because I am currently learning japanese and trying to use it daily I wanted to change the language
+of the setup. But knowing some people who use english may want to use my setup I have decided to add
+translations in the dotfiles.
+
+When run nvim will pass the language you have set and translate it to the desired language.
+If no language available or translation than it will setup the default message.
+
+> [!WARNING]
+> Japanese is still now available. Will be coming as soon as I finish learning sufficient
+> to bring a well translated configuration.
+
 ## Info ℹ️
 
 Read: `To visualize on vim the keybindings press F3. I also documented all my custom bindings.`

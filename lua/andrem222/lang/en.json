@@ -1,0 +1,595 @@
+{
+    "Browse Files": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:18",
+            "group": "Telescope Bindings"
+        }
+    },
+
+
+    "Resume Search": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:19",
+            "group": "Telescope Bindings"
+        }
+    },
+
+
+    "File Parse": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:20",
+            "group": "Telescope Bindings"
+        }
+    },
+
+
+    "Live Grep": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:21",
+            "group": "Telescope Bindings"
+        }
+    },
+
+
+    "Show Diagnostics": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:22",
+            "group": "Telescope Bindings"
+        }
+    },
+
+    "Git Status": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:23",
+            "group": "Telescope Bindings"
+        }
+    },
+
+
+
+    "Show Buffers": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:24",
+            "group": "Telescope Bindings"
+        }
+    },
+
+
+    "Show Help Tags": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:25",
+            "group": "Telescope Bindings"
+        }
+    },
+
+
+    "Show Keymaps": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:26",
+            "group": "Telescope Bindings"
+        }
+    },
+
+
+    "Show Notifications": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:27",
+            "group": "Telescope Bindings"
+        }
+    },
+
+
+    "Open Mason": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:30",
+            "group": "Installations"
+        }
+    },
+
+
+    "Open Lazy": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:31",
+            "group": "Installations"
+        }
+    },
+
+
+    "LSP Info": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:34",
+            "group": "Status"
+        }
+    },
+
+
+    "NullLS Info": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:34",
+            "group": "Status"
+        }
+    },
+
+
+    "Move Selection Down": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:38",
+            "group": "Moving Selections"
+        }
+    },
+
+
+    "Move Selection Up": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:39",
+            "group": "Moving Selections"
+        }
+    },
+
+
+    "Move Selection Down": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:40",
+            "group": "Moving Selections"
+        }
+    },
+
+
+    "Move Selection Up": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:41",
+            "group": "Moving Selections"
+        }
+    },
+
+
+    "Move Selection Left": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:43",
+            "group": "Moving Selections"
+        }
+    },
+
+
+    "Move Selection Right": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:44",
+            "group": "Moving Selections"
+        }
+    },
+
+
+    "Move Selection Left": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:45",
+            "group": "Moving Selections"
+        }
+    },
+
+
+    "Move Selection Right": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:46",
+            "group": "Moving Selections"
+        }
+    },
+
+
+    "Close Buffer": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:49",
+            "group": "Bufferline Bindings"
+        }
+    },
+
+
+    "Next Buffer": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:50",
+            "group": "Bufferline Bindings"
+        }
+    },
+
+
+    "Previous Buffer": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:51",
+            "group": "Bufferline Bindings"
+        }
+    },
+
+
+    "Toggle Comment": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:54",
+            "group": "Comment Binding"
+        }
+    },
+
+
+    "Toggle Comment": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:55",
+            "group": "Comment Binding"
+        }
+    },
+
+
+    "Toggle Comment": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:56",
+            "group": "Comment Binding"
+        }
+    },
+
+
+    "Format": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:59",
+            "group": "Format Bindings"
+        }
+    },
+
+
+    "Show Hover": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:62",
+            "group": "Lspsaga Setup"
+        }
+    },
+
+
+    "Peek Definition": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:63",
+            "group": "Lspsaga Setup"
+        }
+    },
+
+
+    "Go to Definition": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:64",
+            "group": "Lspsaga Setup"
+        }
+    },
+
+
+    "Find References and Implementations": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:65",
+            "group": "Lspsaga Setup"
+        }
+    },
+
+
+    "Code Action": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:66",
+            "group": "Lspsaga Setup"
+        }
+    },
+
+
+    "Jump to Next Diagnostic": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:67",
+            "group": "Lspsaga Setup"
+        }
+    },
+
+
+    "Jump to Previous Diagnostic": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:68",
+            "group": "Lspsaga Setup"
+        }
+    },
+
+
+    "Show Line Diagnostics": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:69",
+            "group": "Lspsaga Setup"
+        }
+    },
+
+
+    "Rename": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:72",
+            "group": "Inc Rename"
+        }
+    },
+
+
+    "Horizontal Split Window": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:78",
+            "group": "Split window"
+        }
+    },
+
+
+    "Vertical Split Window": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:79",
+            "group": "Split window"
+        }
+    },
+
+
+    "Move to Left Window": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:81",
+            "group": "Move window"
+        }
+    },
+
+
+    "Move to Upper Window": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:82",
+            "group": "Move window"
+        }
+    },
+
+
+    "Move to Lower Window": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:83",
+            "group": "Move window"
+        }
+    },
+
+
+    "Move to Right Window": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:84",
+            "group": "Move window"
+        }
+    },
+
+
+    "Resize Pane Left": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:88",
+            "group": "Resize panes"
+        }
+    },
+
+
+    "Resize Pane Up": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:89",
+            "group": "Resize panes"
+        }
+    },
+
+
+    "Resize Pane Down": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:90",
+            "group": "Resize panes"
+        }
+    },
+
+
+    "Resize Pane Right": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:91",
+            "group": "Resize panes"
+        }
+    },
+
+
+    "Debug Continue": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:94",
+            "group": "DAP Bindings"
+        }
+    },
+
+
+    "Debug Step Over": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:95",
+            "group": "DAP Bindings"
+        }
+    },
+
+
+    "Debug Step Into": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:96",
+            "group": "DAP Bindings"
+        }
+    },
+
+
+    "Debug Step Out": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:97",
+            "group": "DAP Bindings"
+        }
+    },
+
+
+    "Toggle Breakpoint": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:98",
+            "group": "DAP Bindings"
+        }
+    },
+
+
+    "Toggle Conditional Breakpoint": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:99",
+            "group": "DAP Bindings"
+        }
+    },
+
+
+    "Toggle Log Point Breakpoint": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:101",
+            "group": "DAP Bindings"
+        }
+    },
+
+
+    "Toggle Debug UI": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:103",
+            "group": "DAP Bindings"
+        }
+    },
+
+
+    "Paste Without Copying": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:106",
+            "group": "Copy and Delete Bindings"
+        }
+    },
+
+
+    "Delete Without Copying": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:108",
+            "group": "Copy and Delete Bindings"
+        }
+    },
+
+
+    "Open Fold": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:111",
+            "group": "Folds"
+        }
+    },
+
+
+    "Close Fold": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:112",
+            "group": "Folds"
+        }
+    },
+
+
+    "Open All Folds": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:113",
+            "group": "Folds"
+        }
+    },
+
+
+    "Close All Folds": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:114",
+            "group": "Folds"
+        }
+    },
+
+
+    "Move to End of Word": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:117",
+            "group": "Ctrl Movement"
+        }
+    },
+
+
+    "Move to End of Word": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:118",
+            "group": "Ctrl Movement"
+        }
+    },
+
+
+    "Escape and clear hlsearch": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:121",
+            "group": "Deselect"
+        }
+    },
+
+
+    "Exit Terminal Mode": {
+        "msgstr": "",
+        "details": {
+            "path": "../bindings.lua:124",
+            "group": "Terminal"
+        }
+
+    }
+}

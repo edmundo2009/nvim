@@ -89,6 +89,12 @@ return {
                 capabilities = capabilities
             })
 
+            -- CMake
+            nvim_lsp.cmake.setup({
+                on_attach = on_attach,
+                capabilities = capabilities
+            })
+
             -- Markdown
             nvim_lsp.marksman.setup({
                 on_attach = on_attach,
@@ -233,8 +239,9 @@ return {
                     "lua",
                     "cpp",
                     "c",
-                    "latex",
+                    "cmake",
                     "c_sharp",
+                    "latex",
                     "python",
                     "javascript",
                     "vimdoc",
@@ -298,6 +305,7 @@ return {
                 ensure_installed = {
                     "clangd",
                     "html",
+                    "cmake",
                     "lua_ls",
                     "pyright",
                     "ts_ls",

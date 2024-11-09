@@ -9,6 +9,9 @@ end
 -- Startup settings
 require('andrem222.config')
 
+-- Setup Translations
+require('andrem222.langMSG')
+
 -- Setup autocmd
 require('andrem222.autocmd')
 

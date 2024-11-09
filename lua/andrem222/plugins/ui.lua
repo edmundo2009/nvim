@@ -235,6 +235,7 @@ return {
             })
         end
     },
+
     {
         'akinsho/nvim-bufferline.lua', -- Buffer Tabs
         event = "VeryLazy",

@@ -214,6 +214,14 @@ return {
 
             -- Noice Setup
             require("noice").setup({
+                cmdline = {
+                    format = {
+                        IncRename = {
+                            title = Msgstr("IncRename"),
+                        },
+                    },
+                },
+
                 lsp = {
                     -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
                     override = {

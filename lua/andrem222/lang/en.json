@@ -629,5 +629,13 @@
             "path": "../plugins/tools.lua:89",
             "group": "telescope"
         }
+    },
+
+    "IncRename": {
+        "msgstr": "",
+        "details": {
+            "path": "../plugins/ui.lua:220",
+            "group": "noice"
+        }
     }
 }

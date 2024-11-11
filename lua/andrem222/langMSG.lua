@@ -11,6 +11,7 @@ if file then
 end
 
 function Msgstr(description)
+    if not file then return description end
     if not jsonFile[description] or jsonFile[description]["msgstr"] == '' then return description end
 
     return jsonFile[description]["msgstr"]

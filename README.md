@@ -229,11 +229,7 @@ If no language available or translation than it will setup the default message.
 Format for translations:
 ```json
     "Message to print (message Id)": {
-        "msgstr (Translated message/Id)": "",
-        "details (Extra Information: not needed)": {
-            "path (Where the message is)": "../bindings.lua:18",
-            "group (Scope)": "Telescope Bindings"
-        }
+        "msgstr (Translated message/Id)": ""
     },
 
 ```

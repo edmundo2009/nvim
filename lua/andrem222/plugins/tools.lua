@@ -10,7 +10,6 @@ return {
         config = function()
             local telescope = require("telescope")
             local actions = require('telescope.actions')
-            local builtin = require("telescope.builtin")
             local function telescope_buffer_dir()
                 return vim.fn.expand('%:p:h')
             end
@@ -53,7 +52,7 @@ return {
                     },
 
                     keymaps = {
-                        prompt_title = Msgstr("Key Maps"),
+                        prompt_title = Msgstr("Keymaps"),
                         results_title = Msgstr("Results"),
                         preview_title = Msgstr("Grep Preview")
                     },

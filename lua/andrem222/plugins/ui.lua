@@ -9,6 +9,58 @@ return {
             cozynight.visual.a.bg = '#ffb86c'
             cozynight.visual.b.fg = '#ffb85c'
 
+            require('lualine.utils.mode').map = {
+                ['n']      = Msgstr('NORMAL'),
+                ['no']     = Msgstr('O-PENDING'),
+                ['nov']    = Msgstr('O-PENDING'),
+                ['noV']    = Msgstr('O-PENDING'),
+                ['no\22']  = Msgstr('O-PENDING'),
+                ['niI']    = Msgstr('NORMAL'),
+                ['niR']    = Msgstr('NORMAL'),
+                ['niV']    = Msgstr('NORMAL'),
+                ['nt']     = Msgstr('NORMAL'),
+                ['ntT']    = Msgstr('NORMAL'),
+                ['v']      = Msgstr('VISUAL'),
+                ['vs']     = Msgstr('VISUAL'),
+                ['V']      = Msgstr('V-LINE'),
+                ['Vs']     = Msgstr('V-LINE'),
+                ['\22']    = Msgstr('V-BLOCK'),
+                ['\22s']   = Msgstr('V-BLOCK'),
+                ['s']      = Msgstr('SELECT'),
+                ['S']      = Msgstr('S-LINE'),
+                ['\19']    = Msgstr('S-BLOCK'),
+                ['i']      = Msgstr('INSERT'),
+                ['ic']     = Msgstr('INSERT'),
+                ['ix']     = Msgstr('INSERT'),
+                ['R']      = Msgstr('REPLACE'),
+                ['Rc']     = Msgstr('REPLACE'),
+                ['Rx']     = Msgstr('REPLACE'),
+                ['Rv']     = Msgstr('V-REPLACE'),
+                ['Rvc']    = Msgstr('V-REPLACE'),
+                ['Rvx']    = Msgstr('V-REPLACE'),
+                ['c']      = Msgstr('COMMAND'),
+                ['cv']     = Msgstr('EX'),
+                ['ce']     = Msgstr('EX'),
+                ['r']      = Msgstr('REPLACE'),
+                ['rm']     = Msgstr('MORE'),
+                ['r?']     = Msgstr('CONFIRM'),
+                ['!']      = Msgstr('SHELL'),
+                ['t']      = Msgstr('TERMINAL'),
+            }
+
+            local rec_msg = ''
+            vim.api.nvim_create_autocmd({ 'RecordingEnter', 'RecordingLeave' }, {
+                group = vim.api.nvim_create_augroup('LualineRecordingSection', { clear = true }),
+                callback = function(e)
+                    if e.event == 'RecordingLeave' then
+                        rec_msg = ''
+                    else
+                        rec_msg = Msgstr('recording')..' @' .. vim.fn.reg_recording()
+                    end
+                    require('lualine').refresh()
+                end,
+            })
+
             require("lualine").setup({
                 options = {
                     icons_enabled = true,
@@ -30,8 +82,9 @@ return {
                     lualine_c = { 'filename' },
                     lualine_x = {
                         {
-                            require("noice").api.statusline.mode.get,
-                            cond = require("noice").api.statusline.mode.has,
+                                function ()
+                                    return rec_msg
+                                end,
                             color = { fg = "#ffb85c" },
                         },
                         CopilotIcon(),

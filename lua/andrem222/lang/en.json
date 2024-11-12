@@ -349,5 +349,77 @@
 
     "Inline Function": {
         "msgstr": ""
+    },
+
+    "INSERT": {
+        "msgstr": ""
+    },
+
+    "NORMAL": {
+        "msgstr": ""
+    },
+
+    "SELECT": {
+        "msgstr": ""
+    },
+
+    "VISUAL": {
+        "msgstr": ""
+    },
+
+    "REPLACE": {
+        "msgstr": ""
+    },
+
+    "COMMAND": {
+        "msgstr": ""
+    },
+
+    "EX": {
+        "msgstr": ""
+    },
+
+    "MORE": {
+        "msgstr": ""
+    },
+
+    "CONFIRM": {
+        "msgstr": ""
+    },
+
+    "SHELL": {
+        "msgstr": ""
+    },
+
+    "TERMINAL": {
+        "msgstr": ""
+    },
+
+    "V-LINE": {
+        "msgstr": ""
+    },
+
+    "V-BLOCK": {
+        "msgstr": ""
+    },
+
+    "V-REPLACE": {
+        "msgstr": ""
+    },
+
+    "S-LINE": {
+        "msgstr": ""
+    },
+
+    "S-BLOCK": {
+        "msgstr": ""
+    },
+
+    "O-PENDING": {
+        "msgstr": ""
+    },
+
+    "recording": {
+        "msgstr": ""
     }
 }

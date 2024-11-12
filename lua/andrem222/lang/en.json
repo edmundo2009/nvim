@@ -312,6 +312,42 @@
     },
 
     "IncRename": {
+        "msgstr": "Rename"
+    },
+
+    "Refactor Menu": {
+        "msgstr": ""
+    },
+
+    "Refactoring: select a refactor to apply:": {
+        "msgstr": "Refactor"
+    },
+
+    "Inline Variable": {
+        "msgstr": ""
+    },
+
+    "Extract Variable": {
+        "msgstr": ""
+    },
+
+    "Extract Function": {
+        "msgstr": ""
+    },
+
+    "Extract Function To File": {
+        "msgstr": ""
+    },
+
+    "Extract Block": {
+        "msgstr": ""
+    },
+
+    "Extract Block To File": {
+        "msgstr": ""
+    },
+
+    "Inline Function": {
         "msgstr": ""
     }
 }

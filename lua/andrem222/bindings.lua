@@ -103,3 +103,6 @@ keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = Msgstr("Escape a
 
 -- Terminal
 keymap.set('t', "<esc>", "<C-\\><C-n>", { desc = Msgstr("Exit Terminal Mode") })
+
+-- Refactoring
+keymap.set('v', "\\r", "<Cmd>RefactorList<CR>", { desc = Msgstr("Refactor Menu") })

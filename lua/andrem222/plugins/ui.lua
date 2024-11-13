@@ -61,6 +61,18 @@ return {
                 end,
             })
 
+            local function progressLoc()
+                local cur = vim.fn.line('.')
+                local total = vim.fn.line('$')
+                if cur == 1 then
+                    return Msgstr('Top')
+                elseif cur == total then
+                    return Msgstr('Bot')
+                else
+                    return string.format('%2d%%%%', math.floor(cur / total * 100))
+                end
+            end
+
             require("lualine").setup({
                 options = {
                     icons_enabled = true,
@@ -82,9 +94,9 @@ return {
                     lualine_c = { 'filename' },
                     lualine_x = {
                         {
-                                function ()
-                                    return rec_msg
-                                end,
+                            function ()
+                                return rec_msg
+                            end,
                             color = { fg = "#ffb85c" },
                         },
                         CopilotIcon(),
@@ -92,7 +104,7 @@ return {
                         'fileformat',
                         'filetype'
                     },
-                    lualine_y = { 'progress' },
+                    lualine_y = { progressLoc },
                     lualine_z = { 'location' }
                 },
                 inactive_sections = {
@@ -153,7 +165,7 @@ return {
                             key = 'k',
                         },
                         {
-                            desc = ' '..Msgstr('Dotfiles'),
+                            desc = ' '..Msgstr('Settings'),
                             group = '@property',
                             action = 'Telescope file_browser cwd=' .. vim.fn.stdpath("config") .. "/lua/andrem222", -- Change to your dotfiles path
                             key = 'd',

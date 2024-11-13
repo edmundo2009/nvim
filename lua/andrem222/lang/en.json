@@ -267,15 +267,11 @@
         "msgstr": ""
     },
 
-    "Dotfiles": {
+    "Settings": {
         "msgstr": ""
     },
 
     "New File": {
-        "msgstr": ""
-    },
-
-    "Git Status": {
         "msgstr": ""
     },
 
@@ -420,6 +416,14 @@
     },
 
     "recording": {
+        "msgstr": ""
+    },
+
+    "Top": {
+        "msgstr": ""
+    },
+
+    "Bot": {
         "msgstr": ""
     }
 }

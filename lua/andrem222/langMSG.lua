@@ -10,6 +10,9 @@ if file then
 
 end
 
+--- This function returns the translation if available of text in the parameter
+--- @param description string Description to translate
+--- @return any
 function Msgstr(description)
     if not jsonFile then return description end
     if not jsonFile[description] or jsonFile[description]["msgstr"] == '' then return description end

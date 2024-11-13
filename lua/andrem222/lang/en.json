@@ -287,10 +287,6 @@
         "msgstr": ""
     },
 
-    "Live Grep": {
-        "msgstr": ""
-    },
-
     "Find Files": {
         "msgstr": ""
     },
@@ -309,6 +305,34 @@
 
     "IncRename": {
         "msgstr": "Rename"
+    },
+
+    "Search": {
+        "msgstr": ""
+    },
+
+    "Filter": {
+        "msgstr": ""
+    },
+
+    "Cmdline": {
+        "msgstr": ""
+    },
+
+    "Input": {
+        "msgstr": ""
+    },
+
+    "Messages": {
+        "msgstr": ""
+    },
+
+    "Error": {
+        "msgstr": ""
+    },
+
+    "Warning": {
+        "msgstr": ""
     },
 
     "Refactor Menu": {
@@ -424,6 +448,18 @@
     },
 
     "Bot": {
+        "msgstr": ""
+    },
+
+    "Debug": {
+        "msgstr": ""
+    },
+
+    "No Name": {
+        "msgstr": ""
+    },
+
+    "New": {
         "msgstr": ""
     }
 }

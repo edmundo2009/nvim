@@ -91,7 +91,15 @@ return {
                             symbols = { error = ' ', warn = ' ', info = ' ', hint = ' ' }
                         }
                     },
-                    lualine_c = { 'filename' },
+                    lualine_c = {
+                        {
+                            'filename',
+                            symbols = {
+                                unnamed = '['..Msgstr('No Name')..']',
+                                newfile = '['..Msgstr('New')..']'
+                            }
+                    }
+                    },
                     lualine_x = {
                         {
                             function ()
@@ -277,13 +285,18 @@ return {
             -- Notify Setup
             require("notify").setup({ background_colour = "#000000" })
 
+            local Config = require("noice.config")
             -- Noice Setup
             require("noice").setup({
                 cmdline = {
                     format = {
-                        IncRename = {
-                            title = Msgstr("IncRename"),
-                        },
+                        IncRename = { title = Msgstr("IncRename") },
+                        search_down = { title = Msgstr("Search") },
+                        search_up = { title = Msgstr("Search") },
+                        filter = { title = Msgstr("Filter") },
+                        cmdline = { title = Msgstr("Cmdline") },
+                        help = { title = Msgstr("Help") },
+                        input = { title = Msgstr("Input") }
                     },
                 },
 
@@ -316,6 +329,27 @@ return {
                         },
                         opts = { skip = true },
                     },
+
+                    {
+                        view = "notify",
+                        filter = {
+                            event = "msg_show",
+                            kind = { "", "echo", "echomsg" },
+                        },
+                        opts = { replace = true, merge = true, title = Msgstr("Messages") }
+                    },
+
+                    {
+                        view = "notify",
+                        filter = { error = true },
+                        opts = { title = Msgstr("Error") }
+                    },
+
+                    {
+                        view = "notify",
+                        filter = { warning = true },
+                        opts = { title = Msgstr("Warning") }
+                    }
                 }
             })
         end

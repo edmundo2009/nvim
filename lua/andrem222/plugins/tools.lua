@@ -136,7 +136,8 @@ return {
                 symbol_in_winbar = { separator = "  " },
                 ui = {
                     border = 'rounded',
-                    code_action = " "
+                    code_action = " ",
+                    title = false
                 }
             })
         end,

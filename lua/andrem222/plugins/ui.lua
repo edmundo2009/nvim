@@ -349,7 +349,22 @@ return {
                         view = "notify",
                         filter = { warning = true },
                         opts = { title = Msgstr("Warning") }
-                    }
+                    },
+
+                    {
+                        view = "notify",
+                        filter = { event = "notify" },
+                        opts = { title = Msgstr("Notify") }
+                    },
+
+                    {
+                        view = "notify",
+                        filter = {
+                            event = "noice",
+                            kind = { "stats", "debug" },
+                        },
+                        opts = { lang = "lua", replace = true, title = Msgstr("Noice") },
+                    },
                 }
             })
         end

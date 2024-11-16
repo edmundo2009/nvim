@@ -20,23 +20,13 @@
 
 ## Setup ⚒️
 
-##### Package Managers 📦
-
-- [Python](https://www.python.org/) - `winget install python3` - <span style="opacity:30%">pip</span>
-
-- [Scoop](https://scoop.sh/) - `irm get.scoop.sh | iex` - <span style="opacity:30%">scoop</span>
-
-- [NVM | NodeJS](https://github.com/coreybutler/nvm-windows) - <span style="opacity:30%">npm</span>
-
-```
-winget install CoreyButler.NVMforWindows
-nvm install lts
-nvm use lts
-```
-
 ##### Scoop - Needs Installation
 
 - [Fira-Font](https://github.com/ryanoasis/nerd-fonts) - `scoop install FiraCode-NF-Mono`
+
+<div align=center>or</div>
+
+- [Fira-Font](https://formulae.brew.sh/cask/font-fira-code-nerd-font#default) - `brew install --casck font-fira-code-nerd-font`
 
 ## Neovim Plugins 📲
 
@@ -243,111 +233,8 @@ Location of translation files:
 
 ## Info ℹ️
 
-Read: `To visualize on vim the keybindings press F3. I also documented all my custom bindings.`
-
-<details>
-<summary>Custom Mappings ⌨️</summary>
-
-`\ + f` - Telescope Find Files
-
-`\ + r` - Telescope Live Grep
-
-`\ + \ + \` - Telescope Buffers
-
-`\ + t` - Telescope
-
-`\ + r` - Telescope Resume Search
-
-`\ + w` - Telescope Diagnostics
-
-`\ + g` - Telescope Git-Status
-
-`F2` - Telescope Help Tags
-
-`F3` - Telescope Keymaps
-
-`Alt - Up` - Move Line | Block up
-
-`Alt - Down` - Move Line | Block Down
-
-`Alt - Left` - Move Line | Block Left
-
-`Alt - Right` - Move Line | Block Right
-
-`Shift - f` - Format
-
-`K` - Lspsaga Hover Doc
-
-`Alt - k` - Lspsaga Peek Definition
-
-`Ctrl - k` - Lspsaga Go To Definition
-
-`g + d` - lspsaga Finder
-
-`g + p` - Lspsaga Code Actions
-
-`Ctrl - j` - Lspsaga Jump Diagnostic Forward
-
-`Ctrl - Shift- j` - Lspsaga Jump Diagnostic Reverse
-
-`g - l` - Lspsaga Line Diagnostic
-
-`g + r` - Lspsaga Rename
-
-`s + s` - Horizontal Split
-
-`s + v` - Vertical Split
-
-`Ctrl - Alt - k` - Increase Pane Vertical
-
-`Ctrl - Alt - i` - Decrease Pane Vertical
-
-`Ctrl - Alt - l` - Increase Pane Horizontal
-
-`Ctrl - Alt - j` - Decrease Pane Horizontal
-
-`s + k` - Pane Move Up
-
-`s + j` - Pane Move Down
-
-`s + h` - Pane Move Left
-
-`s + l` - Pane Move Right
-
-`F9` - Debugger Continue
-
-`F10` - Debugger Step Over
-
-`F11` - Debugger Step Into
-
-`F12` - Debugger Step Out
-
-`\ + b + b` - Debugger Breakpoint
-
-`\ + b + c` - Debugger Breakpoint With Conditions
-
-`\ + b + l` - Debugger Breakpoint With Log Message
-
-`\ + b + u` - Debugger Toggle
-
-`Alt - =` - Open Fold All
-
-`Alt - -` - Close Fold All
-
-`+` - Open Folds Selected
-
-`_` - Close Folds Selected
-
-`CTRL - /` - Comment Line In Line
-
-`CTRL - Alt - /` - Comment BLock
-
-`Esc` - Clear hlsearch
-
-`\p` - Paste Without Deleting
-
-`\d` - Delete Without Deleting
-</details>
+> [!INFO]
+> To visualize on vim the keybindings press F5. I also documented all my custom bindings.
 
 <details>
 <summary>Debugging 🐞</summary>
@@ -359,10 +246,11 @@ Fix:
 Some fonts do not work well with some color themes and can cause that issue or the terminal.
 You have to try until you find the right font, switch the theme, terminal or make tweaks by yourself. Generaly fonts ending with mono work.
 ```
+
 problem: `Transparency Not Available`
 
 Fix:
-```
+```lua
 Check you enabled transparency in the temrinal. If you still encounter
 problems then you probably have to enable it from your nvim configuration.
 Dracula theme transparency is not sufficient so some tweaks are requried.
@@ -389,14 +277,6 @@ Look for the documentation to make the changes on the CLI.
 
 For clang-format: https://clang.llvm.org/docs/ClangFormat.html
 For prettier: https://prettier.io/docs/en/options.html#vue-files-script-and-style-tags-indentation
-```
-
-Problem: `Scoop buckets wont update`
-
-Fix:
-```
-scoop config SCOOP_BRANCH master
-scoop update
 ```
 
 Problem: `C++ compiler not working`

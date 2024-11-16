@@ -4,6 +4,7 @@
         "statusIcon"
     ],
     "diagnostics.disable": [
-        "missing-fields"
+        "missing-fields",
+        "unused-vararg"
     ]
 }

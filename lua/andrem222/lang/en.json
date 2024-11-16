@@ -3,43 +3,43 @@
         "msgstr": ""
     },
 
-    "Resume Search": {
+    "Lists the results including multi-selections of the previous picker": {
         "msgstr": ""
     },
 
-    "File Parse": {
+    "Lists files in your current working directory": {
         "msgstr": ""
     },
 
-    "Live Grep": {
+    "Search for a string in your current working directory and get results live as you type": {
         "msgstr": ""
     },
 
-    "Show Diagnostics": {
+    "Lists Diagnostics for all open buffers or a specific buffer": {
         "msgstr": ""
     },
 
-    "Git Status": {
+    "Lists current changes per file with diff preview and add action": {
         "msgstr": ""
     },
 
-    "Show Buffers": {
+    "Lists open buffers in current neovim instance": {
         "msgstr": ""
     },
 
-    "Show Help Tags": {
+    "Lists available help tags and opens a new window with the relevant help info": {
         "msgstr": ""
     },
 
-    "Show Keymaps": {
+    "Lists normal mode keymappings": {
         "msgstr": ""
     },
 
-    "Open Mason": {
+    "Open Mason Menu": {
         "msgstr": ""
     },
 
-    "Open Lazy": {
+    "Open Lazy Menu": {
         "msgstr": ""
     },
 
@@ -87,23 +87,19 @@
         "msgstr": ""
     },
 
-    "Toggle Comment": {
+    "Toggle Line Comment": {
         "msgstr": ""
     },
 
-    "Toggle Comment": {
+    "Toggle Block Comment": {
         "msgstr": ""
     },
 
-    "Toggle Comment": {
+    "Format Lines Of Code": {
         "msgstr": ""
     },
 
-    "Format": {
-        "msgstr": ""
-    },
-
-    "Show Hover": {
+    "Show Hover Documentation": {
         "msgstr": ""
     },
 
@@ -135,7 +131,7 @@
         "msgstr": ""
     },
 
-    "Rename": {
+    "Renaming with immediate visual feedback": {
         "msgstr": ""
     },
 
@@ -219,11 +215,11 @@
         "msgstr": ""
     },
 
-    "Open Fold": {
+    "Open Current Fold": {
         "msgstr": ""
     },
 
-    "Close Fold": {
+    "Close Current Fold": {
         "msgstr": ""
     },
 
@@ -232,14 +228,6 @@
     },
 
     "Close All Folds": {
-        "msgstr": ""
-    },
-
-    "Move to End of Word": {
-        "msgstr": ""
-    },
-
-    "Move to End of Word": {
         "msgstr": ""
     },
 
@@ -296,6 +284,10 @@
     },
 
     "Grep Preview": {
+        "msgstr": ""
+    },
+
+    "Help Preview": {
         "msgstr": ""
     },
 
@@ -468,6 +460,14 @@
     },
 
     "New": {
+        "msgstr": ""
+    },
+
+    "Log point message": {
+        "msgstr": ""
+    },
+
+    "Breakpoint condition": {
         "msgstr": ""
     }
 }

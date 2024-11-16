@@ -2,18 +2,18 @@ local keymap = vim.keymap
 
 -- Telescope Bindings
 keymap.set('n', '\\t', '<Cmd>Telescope file_browser<CR>', { silent = true, desc = Msgstr("Browse Files") })
-keymap.set('n', '\\r', '<Cmd>Telescope resume<CR>', { silent = true, desc = Msgstr("Resume Search") })
-keymap.set('n', '\\f', '<Cmd>Telescope find_files<CR>', { silent = true, desc = Msgstr("File Parse") })
-keymap.set('n', '\\l', '<cmd>Telescope live_grep<cr>', { silent = true, desc = Msgstr("Live Grep") })
-keymap.set('n', '\\w', '<Cmd>Telescope diagnostics<CR>', { silent = true, desc = Msgstr("Show Diagnostics") })
-keymap.set('n', '\\g', '<Cmd>Telescope git_status<CR>', { silent = true, desc = Msgstr("Git Status") })
-keymap.set('n', '\\\\', '<Cmd>Telescope buffers<CR>', { silent = true, desc = Msgstr("Show Buffers") })
-keymap.set('n', '<F3>', '<Cmd>Telescope help_tags<CR>', { silent = true, desc = Msgstr("Show Help Tags") })
-keymap.set('n', '<F4>', '<Cmd>Telescope keymaps<CR>', { silent = true, desc = Msgstr("Show Keymaps") })
+keymap.set('n', '\\r', '<Cmd>Telescope resume<CR>', { silent = true, desc = Msgstr("Lists the results including multi-selections of the previous picker") })
+keymap.set('n', '\\f', '<Cmd>Telescope find_files<CR>', { silent = true, desc = Msgstr("Lists files in your current working directory") })
+keymap.set('n', '\\l', '<cmd>Telescope live_grep<cr>', { silent = true, desc = Msgstr("Search for a string in your current working directory and get results live as you type") })
+keymap.set('n', '\\w', '<Cmd>Telescope diagnostics<CR>', { silent = true, desc = Msgstr("Lists Diagnostics for all open buffers or a specific buffer") })
+keymap.set('n', '\\g', '<Cmd>Telescope git_status<CR>', { silent = true, desc = Msgstr("Lists current changes per file with diff preview and add action") })
+keymap.set('n', '\\\\', '<Cmd>Telescope buffers<CR>', { silent = true, desc = Msgstr("Lists open buffers in current neovim instance") })
+keymap.set('n', '<F3>', '<Cmd>Telescope help_tags<CR>', { silent = true, desc = Msgstr("Lists available help tags and opens a new window with the relevant help info") })
+keymap.set('n', '<F4>', '<Cmd>Telescope keymaps<CR>', { silent = true, desc = Msgstr("Lists normal mode keymappings") })
 
 -- Installations
-keymap.set('n', '<S-Home>', '<Cmd>Mason<CR>', { silent = true, desc = Msgstr("Open Mason") })
-keymap.set('n', '<Home>', '<Cmd>Lazy<CR>', { silent = true, desc = Msgstr("Open Lazy") })
+keymap.set('n', '<S-Home>', '<Cmd>Mason<CR>', { silent = true, desc = Msgstr("Open Mason Menu") })
+keymap.set('n', '<Home>', '<Cmd>Lazy<CR>', { silent = true, desc = Msgstr("Open Lazy Menu") })
 
 -- Moving Selections
 keymap.set({ 'n', 'i' }, '<A-Down>', '<Esc>:m .+1<CR>==', { silent = true, desc = Msgstr("Move Selection Down") })
@@ -27,20 +27,20 @@ keymap.set('v', '<A-Left>', '<gv', { desc = Msgstr("Move Selection Left") })
 keymap.set('v', '<A-Right>', '>gv', { desc = Msgstr("Move Selection Right") })
 
 -- Bufferline Bindings
-keymap.set('n', '<S-q>', '<Cmd>bdelete<CR>', { desc = Msgstr("Close Buffer") })
-keymap.set('n', '<Tab>', '<Cmd>BufferLineCycleNext<CR> {}', { desc = Msgstr("Next Buffer") })
-keymap.set('n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR> {}', { desc = Msgstr("Previous Buffer") })
+keymap.set('n', '<S-q>', '<Cmd>bdelete<CR>', { desc = Msgstr("Close Buffer Current") })
+keymap.set('n', '<Tab>', '<Cmd>BufferLineCycleNext<CR> {}', { desc = Msgstr("Switch To Next Buffer") })
+keymap.set('n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR> {}', { desc = Msgstr("Switch To Previous Buffer") })
 
 -- Comment Binding
-keymap.set({ 'i', 'n' }, '<C-_>', '<ESC><Plug>(comment_toggle_linewise_current)', { desc = Msgstr("Toggle Comment") })
-keymap.set('x', '<C-_>', '<Plug>(comment_toggle_linewise_visual)', { desc = Msgstr("Toggle Comment") })
-keymap.set('x', '<C-A-_>', '<Plug>(comment_toggle_blockwise_visual)', { desc = Msgstr("Toggle Comment") })
+keymap.set({ 'i', 'n' }, 'gcc', '<ESC><Plug>(comment_toggle_linewise_current)', { desc = Msgstr("Toggle Line Comment") })
+keymap.set('x', 'gc', '<Plug>(comment_toggle_linewise_visual)', { desc = Msgstr("Toggle Line Comment") })
+keymap.set('x', 'gb', '<Plug>(comment_toggle_blockwise_visual)', { desc = Msgstr("Toggle Block Comment") })
 
 -- Format Bindings
-keymap.set({ 'v', 'n', 'i' }, '<S-A-f>', '<Cmd>lua vim.lsp.buf.format({ timeout_ms = 2000 })<CR>', { desc = Msgstr("Format") })
+keymap.set({ 'v', 'n', 'i' }, '<S-A-f>', '<Cmd>lua vim.lsp.buf.format({ timeout_ms = 2000 })<CR>', { desc = Msgstr("Format Lines Of Code") })
 
 -- Lspsaga Setup
-keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', { desc = Msgstr("Show Hover") })
+keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', { desc = Msgstr("Show Hover Documentation") })
 keymap.set('n', '<A-k>', '<Cmd>Lspsaga peek_definition<CR>', { desc = Msgstr("Peek Definition") })
 keymap.set('n', '<C-k>', '<Cmd>Lspsaga goto_definition<CR>', { desc = Msgstr("Go to Definition") })
 keymap.set('n', 'gd', '<Cmd>Lspsaga finder<CR>', { desc = Msgstr("Find References and Implementations") })
@@ -53,7 +53,7 @@ keymap.set('n', 'gl', '<Cmd>Lspsaga show_line_diagnostics<CR>', { desc = Msgstr(
 keymap.set('n', 'gr',function()
     local inc_rename = require("inc_rename")
     return ":" .. inc_rename.config.cmd_name .. " " .. vim.fn.expand("<cword>")
-end, { expr = true, desc = Msgstr("Rename") })
+end, { expr = true, desc = Msgstr("Renaming with immediate visual feedback") })
 
 -- Split window
 keymap.set("n", "ss", ":split<Return>", { noremap = true, silent = true, desc = Msgstr("Horizontal Split Window") })
@@ -77,9 +77,9 @@ keymap.set('n', '<F11>', '<Cmd>DapStepOver<CR>', { desc = Msgstr("Debug Step Ove
 keymap.set('n', '<F12>', '<Cmd>DapStepInto<CR>', { desc = Msgstr("Debug Step Into") })
 keymap.set('n', '<F13>', '<Cmd>DapStepOut<CR>', { desc = Msgstr("Debug Step Out") })
 keymap.set('n', '\\bb', '<Cmd>DapToggleBreakpoint<CR>', { desc = Msgstr("Toggle Breakpoint") })
-keymap.set('n', '\\bc', [[<Cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))()<CR>]],
+keymap.set('n', '\\bc', [[<Cmd>lua require'dap'.set_breakpoint(vim.fn.input(Msgstr('Breakpoint condition')))()<CR>]],
     { desc = Msgstr("Toggle Conditional Breakpoint") })
-keymap.set('n', '\\bl', [[<Cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>]],
+keymap.set('n', '\\bl', [[<Cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input(Msgstr('Log point message')))<CR>]],
     { desc = Msgstr("Toggle Log Point Breakpoint") })
 keymap.set('n', '\\bu', [[<Cmd>lua require'dapui'.toggle()<CR>]], { desc = Msgstr("Toggle Debug UI") })
 
@@ -89,14 +89,10 @@ keymap.set("x", "\\p", [["_dP]], { desc = Msgstr("Paste Without Copying") })
 keymap.set({"n", "v"}, "\\d", [["_d]], { desc = Msgstr("Delete Without Copying") })
 
 -- Folds
-keymap.set('n', '+', '<Cmd>foldopen<CR>', { desc = Msgstr("Open Fold") })
-keymap.set('n', '_', '<Cmd>foldclose<CR>', { desc = Msgstr("Close Fold") })
+keymap.set('n', '+', '<Cmd>foldopen<CR>', { desc = Msgstr("Open Current Fold") })
+keymap.set('n', '_', '<Cmd>foldclose<CR>', { desc = Msgstr("Close Current Fold") })
 keymap.set('n', '<A-=>', '<Cmd>OpenAllFolds<CR>', { desc = Msgstr("Open All Folds") })
 keymap.set('n', '<A-->', '<Cmd>CloseAllFolds<CR>', { desc = Msgstr("Close All Folds") })
-
--- Ctrl Movement
-keymap.set({ 'n', 'v' }, '<C-Right>', 'E', { desc = Msgstr("Move to End of Word") })
-keymap.set('i', '<C-Right>', '<C-o>E<Right>', { desc = Msgstr("Move to End of Word") })
 
 -- Deselect
 keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = Msgstr("Escape and clear hlsearch") })

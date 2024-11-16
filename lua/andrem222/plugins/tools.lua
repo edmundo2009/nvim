@@ -48,13 +48,12 @@ return {
                     help_tags = {
                         prompt_title = Msgstr("Help"),
                         results_title = Msgstr("Results"),
-                        preview_title = Msgstr("Grep Preview")
+                        preview_title = Msgstr("Help Preview")
                     },
 
                     keymaps = {
                         prompt_title = Msgstr("Keymaps"),
                         results_title = Msgstr("Results"),
-                        preview_title = Msgstr("Grep Preview")
                     },
 
                     live_grep = {

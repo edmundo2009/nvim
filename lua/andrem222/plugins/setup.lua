@@ -83,8 +83,15 @@ return {
                     },
                 },
             })
+
             -- C, C++
             nvim_lsp.clangd.setup({
+                on_attach = on_attach,
+                capabilities = capabilities
+            })
+
+            -- Docker
+            nvim_lsp.dockerls.setup({
                 on_attach = on_attach,
                 capabilities = capabilities
             })
@@ -231,11 +238,11 @@ return {
                     "tsx",
                     "toml",
                     "php",
-                    "nim",
                     "json",
                     "yaml",
                     "css",
                     "html",
+                    "dockerfile",
                     "lua",
                     "cpp",
                     "c",
@@ -245,7 +252,6 @@ return {
                     "python",
                     "javascript",
                     "vimdoc",
-                    "go",
                     "regex",
                     (function()
                         if (os.getenv("WINDIR") and not os.getenv("WSL_INTEROP")) then
@@ -309,13 +315,12 @@ return {
                     "lua_ls",
                     "pyright",
                     "ts_ls",
-                    "nim_langserver",
                     "texlab",
                     "vimls",
                     "csharp_ls",
+                    "dockerls",
                     "tailwindcss",
                     "marksman",
-                    "gopls",
                     "cssls",
                     (function()
                         if (os.getenv("WINDIR") and not os.getenv("WSL_INTEROP")) then

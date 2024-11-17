@@ -37,8 +37,8 @@ return {
     {
         "monaqa/dial.nvim", -- Incerement and Decrement Improvement
         keys = {
-            { "<C-a>", function() return require("dial.map").inc_normal() end, expr = true, desc = "Increment" },
-            { "<C-x>", function() return require("dial.map").dec_normal() end, expr = true, desc = "Decrement" },
+            { "<C-a>", function() return require("dial.map").inc_normal() end, expr = true, desc = Msgstr("Increment Value Under Cursor") },
+            { "<C-x>", function() return require("dial.map").dec_normal() end, expr = true, desc = Msgstr("Decrement Value Under Cursor") },
         },
         config = function()
             local augend = require("dial.augend")

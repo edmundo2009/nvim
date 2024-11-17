@@ -1,15 +1,15 @@
 local keymap = vim.keymap
 
 -- Telescope Bindings
-keymap.set('n', '\\t', '<Cmd>Telescope file_browser<CR>', { silent = true, desc = Msgstr("Browse Files") })
+keymap.set('n', '\\t', '<Cmd>Telescope file_browser<CR>', { silent = true, desc = Msgstr("Browse Through Files") })
 keymap.set('n', '\\r', '<Cmd>Telescope resume<CR>', { silent = true, desc = Msgstr("Lists the results including multi-selections of the previous picker") })
 keymap.set('n', '\\f', '<Cmd>Telescope find_files<CR>', { silent = true, desc = Msgstr("Lists files in your current working directory") })
 keymap.set('n', '\\l', '<cmd>Telescope live_grep<cr>', { silent = true, desc = Msgstr("Search for a string in your current working directory and get results live as you type") })
 keymap.set('n', '\\w', '<Cmd>Telescope diagnostics<CR>', { silent = true, desc = Msgstr("Lists Diagnostics for all open buffers or a specific buffer") })
 keymap.set('n', '\\g', '<Cmd>Telescope git_status<CR>', { silent = true, desc = Msgstr("Lists current changes per file with diff preview and add action") })
-keymap.set('n', '\\\\', '<Cmd>Telescope buffers<CR>', { silent = true, desc = Msgstr("Lists open buffers in current neovim instance") })
+keymap.set('n', '\\\\', '<Cmd>Telescope buffers<CR>', { silent = true, desc = Msgstr("Lists open buffers in current instance") })
 keymap.set('n', '<F3>', '<Cmd>Telescope help_tags<CR>', { silent = true, desc = Msgstr("Lists available help tags and opens a new window with the relevant help info") })
-keymap.set('n', '<F4>', '<Cmd>Telescope keymaps<CR>', { silent = true, desc = Msgstr("Lists normal mode keymappings") })
+keymap.set('n', '<F4>', '<Cmd>Telescope keymaps<CR>', { silent = true, desc = Msgstr("Lists normal mode key mappings") })
 
 -- Installations
 keymap.set('n', '<S-Home>', '<Cmd>Mason<CR>', { silent = true, desc = Msgstr("Open Mason Menu") })
@@ -27,7 +27,7 @@ keymap.set('v', '<A-Left>', '<gv', { desc = Msgstr("Move Selection Left") })
 keymap.set('v', '<A-Right>', '>gv', { desc = Msgstr("Move Selection Right") })
 
 -- Bufferline Bindings
-keymap.set('n', '<S-q>', '<Cmd>bdelete<CR>', { desc = Msgstr("Close Buffer Current") })
+keymap.set('n', '<S-q>', '<Cmd>bdelete<CR>', { desc = Msgstr("Close Current Buffer") })
 keymap.set('n', '<Tab>', '<Cmd>BufferLineCycleNext<CR> {}', { desc = Msgstr("Switch To Next Buffer") })
 keymap.set('n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR> {}', { desc = Msgstr("Switch To Previous Buffer") })
 
@@ -42,7 +42,7 @@ keymap.set({ 'v', 'n', 'i' }, '<S-A-f>', '<Cmd>lua vim.lsp.buf.format({ timeout_
 -- Lspsaga Setup
 keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', { desc = Msgstr("Show Hover Documentation") })
 keymap.set('n', '<A-k>', '<Cmd>Lspsaga peek_definition<CR>', { desc = Msgstr("Peek Definition") })
-keymap.set('n', '<C-k>', '<Cmd>Lspsaga goto_definition<CR>', { desc = Msgstr("Go to Definition") })
+keymap.set('n', '<C-]>', '<Cmd>Lspsaga goto_definition<CR>', { desc = Msgstr("Go to Definition") })
 keymap.set('n', 'gd', '<Cmd>Lspsaga finder<CR>', { desc = Msgstr("Find References and Implementations") })
 keymap.set('n', 'gp', '<Cmd>Lspsaga code_action<CR>', { desc = Msgstr("Code Action") })
 keymap.set('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', { desc = Msgstr("Jump to Next Diagnostic") })

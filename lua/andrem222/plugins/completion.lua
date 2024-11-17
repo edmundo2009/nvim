@@ -7,7 +7,7 @@ return {
             {
                 'L3MON4D3/LuaSnip',
                 build = (vim.uv.os_uname().sysname:find("Windows") ~= nil)
-                    and "echo 'NOTE: jsregexp is optional, so not a big deal if it fails to build'; make install_jsregexp"
+                    and "echo '"..Msgstr("NOTE: jsregexp is optional, so not a big deal if it fails to build").."'; make install_jsregexp"
                     or nil,
                 dependencies = {
                     {

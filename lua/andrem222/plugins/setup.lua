@@ -87,7 +87,10 @@ return {
             -- C, C++
             nvim_lsp.clangd.setup({
                 on_attach = on_attach,
-                capabilities = capabilities
+                capabilities = capabilities,
+                init_options = {
+                    fallbackFlags = {'-std=c++20'}
+                }
             })
 
             -- Docker
@@ -174,12 +177,6 @@ return {
                 capabilities = capabilities
             })
 
-            -- Go
-            nvim_lsp.gopls.setup({
-                on_attach = on_attach,
-                capabilities = capabilities
-            })
-
             -- vim
             nvim_lsp.vimls.setup({
                 on_attach = on_attach,
@@ -188,12 +185,6 @@ return {
 
             -- CSS
             nvim_lsp.cssls.setup({
-                on_attach = on_attach,
-                capabilities = capabilities
-            })
-
-            -- Nim
-            nvim_lsp.nim_langserver.setup({
                 on_attach = on_attach,
                 capabilities = capabilities
             })

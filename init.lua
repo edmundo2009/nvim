@@ -21,8 +21,8 @@ require('andrem222.devconfig')
 -- Lazy setup and plugins
 require('andrem222.lazy')
 
--- Theme modifications
-require('andrem222.theme')
-
 -- Mapping of keys
 require('andrem222.bindings')
+
+-- Theme modifications
+require('andrem222.theme')

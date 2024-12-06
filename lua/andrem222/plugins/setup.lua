@@ -290,11 +290,9 @@ return {
             -- Setuo Null-ls on mason
             require("mason-null-ls").setup({
                 automatic_installation = true,
-                ensure_installed = { "prettier", "clang-format", "eslint_d", "autopep8" },
+                ensure_installed = { "prettier", "clang-format", "eslint_d", "autopep8", "latexindent" },
                 automatic_setup = true
             })
-
-
 
             require'lspconfig'.texlab.setup{}
             -- Setup lspconfig on mason
@@ -364,6 +362,7 @@ return {
                     }),
 
                     require("none-ls.formatting.autopep8"),
+                    require("none-ls.formatting.latexindent"),
 
                     -- -- Diagnostics
                     require("none-ls.code_actions.eslint_d").with({

@@ -71,18 +71,6 @@ keymap.set('n', '<C-A-k>', '<Cmd>resize +4<CR>', { desc = Msgstr("Resize Pane Up
 keymap.set('n', '<C-A-j>', '<Cmd>resize -4<CR>', { desc = Msgstr("Resize Pane Down") })
 keymap.set('n', '<C-A-l>', '<Cmd>vertical resize +4<CR>', { desc = Msgstr("Resize Pane Right") })
 
--- DAP Bindings
-keymap.set('n', '<F10>', '<Cmd>DapContinue<CR>', { desc = Msgstr("Debug Continue") })
-keymap.set('n', '<F11>', '<Cmd>DapStepOver<CR>', { desc = Msgstr("Debug Step Over") })
-keymap.set('n', '<F12>', '<Cmd>DapStepInto<CR>', { desc = Msgstr("Debug Step Into") })
-keymap.set('n', '<F13>', '<Cmd>DapStepOut<CR>', { desc = Msgstr("Debug Step Out") })
-keymap.set('n', '\\bb', '<Cmd>DapToggleBreakpoint<CR>', { desc = Msgstr("Toggle Breakpoint") })
-keymap.set('n', '\\bc', [[<Cmd>lua require'dap'.set_breakpoint(vim.fn.input(Msgstr('Breakpoint condition')))()<CR>]],
-    { desc = Msgstr("Toggle Conditional Breakpoint") })
-keymap.set('n', '\\bl', [[<Cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input(Msgstr('Log point message')))<CR>]],
-    { desc = Msgstr("Toggle Log Point Breakpoint") })
-keymap.set('n', '\\bu', [[<Cmd>lua require'dapui'.toggle()<CR>]], { desc = Msgstr("Toggle Debug UI") })
-
 -- Copy and Delete Bindings
 keymap.set("x", "\\p", [["_dP]], { desc = Msgstr("Paste Without Copying") })
 

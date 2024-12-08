@@ -159,38 +159,6 @@
         "msgstr": "ペインのサイズ変更右"
     },
 
-    "Debug Continue": {
-        "msgstr": "デバッグ続行"
-    },
-
-    "Debug Step Over": {
-        "msgstr": "デバッグステップオーバー"
-    },
-
-    "Debug Step Into": {
-        "msgstr": "デバッグステップイン"
-    },
-
-    "Debug Step Out": {
-        "msgstr": "デバッグステップアウト"
-    },
-
-    "Toggle Breakpoint": {
-        "msgstr": "ブレークポイントを切り替える"
-    },
-
-    "Toggle Conditional Breakpoint": {
-        "msgstr": "条件付きブレークポイントの切り替え"
-    },
-
-    "Toggle Log Point Breakpoint": {
-        "msgstr": "ログポイントのブレークポイントを切り替える"
-    },
-
-    "Toggle Debug UI": {
-        "msgstr": "デバッグUIを切り替える"
-    },
-
     "Paste Without Copying": {
         "msgstr": "コピーせずに貼り付ける"
     },
@@ -453,14 +421,6 @@
 
     "New": {
         "msgstr": "新しい"
-    },
-
-    "Log point message": {
-        "msgstr": "ログポイントメッセージ"
-    },
-
-    "Breakpoint condition": {
-        "msgstr": "ブレークポイント条件"
     },
 
     "Increment Value Under Cursor": {

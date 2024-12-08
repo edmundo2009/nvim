@@ -73,8 +73,6 @@
   - [Mason-Null-LS](https://github.com/jay-babu/mason-null-ls.nvim) - Null-LS Setup
 
   - [Mason-LSPConfig](https://github.com/williamboman/mason-lspconfig.nvim) - LSPConfig Setup
-
-  - [Mason-Nvim-DAP](https://github.com/jay-babu/mason-nvim-dap.nvim) - DAP Setup
   </details>
 
 - [Buffer-Line](https://github.com/akinsho/bufferline.nvim) - File Tabs
@@ -88,13 +86,6 @@
 - [None-LS](https://github.com/nvimtools/none-ls.nvim) - Formatting Languages And Linter
 - [Indent-Blankline](https://github.com/lukas-reineke/indent-blankline.nvim) - Indent Lines
 - [Lspsaga](https://github.com/glepnir/lspsaga.nvim) - LSP UI
-- [DAP](https://github.com/mfussenegger/nvim-dap) - Debugger
-  <details> <summary>Dependencies</summary>
-
-  - [Nvim-DAP-UI](https://github.com/rcarriga/nvim-dap-ui) - UI Setup
-
-  - [Nvim-DAP-Virtual-Text](https://github.com/theHamsta/nvim-dap-virtual-text) - Virtual Text Setup
-
 - [Nvim-NIO](https://github.com/nvim-neotest/nvim-nio) - Asynchronous IO
 - [Nvim-UFO](https://github.com/kevinhwang91/nvim-ufo) - Folding Design
   <details> <summary>Dependencies</summary>

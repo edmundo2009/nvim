@@ -159,38 +159,6 @@
         "msgstr": ""
     },
 
-    "Debug Continue": {
-        "msgstr": ""
-    },
-
-    "Debug Step Over": {
-        "msgstr": ""
-    },
-
-    "Debug Step Into": {
-        "msgstr": ""
-    },
-
-    "Debug Step Out": {
-        "msgstr": ""
-    },
-
-    "Toggle Breakpoint": {
-        "msgstr": ""
-    },
-
-    "Toggle Conditional Breakpoint": {
-        "msgstr": ""
-    },
-
-    "Toggle Log Point Breakpoint": {
-        "msgstr": ""
-    },
-
-    "Toggle Debug UI": {
-        "msgstr": ""
-    },
-
     "Paste Without Copying": {
         "msgstr": ""
     },
@@ -452,14 +420,6 @@
     },
 
     "New": {
-        "msgstr": ""
-    },
-
-    "Log point message": {
-        "msgstr": ""
-    },
-
-    "Breakpoint condition": {
         "msgstr": ""
     },
 

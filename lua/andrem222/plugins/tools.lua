@@ -153,30 +153,5 @@ return {
                 current_line_blame_formatter = '   <author>, <author_time:%R> • <summary>'
             })
         end,
-    },
-
-    {
-        'mfussenegger/nvim-dap', -- Debbuger
-        dependencies = {
-            'rcarriga/nvim-dap-ui',
-            'theHamsta/nvim-dap-virtual-text'
-        },
-        config = function()
-            local dap = require("dap")
-            local dapui = require("dapui")
-
-            dapui.setup()
-            require("nvim-dap-virtual-text").setup({})
-
-            vim.fn.sign_define('DapBreakpoint', { text = '', texthl = 'DapUIStop' })
-            vim.fn.sign_define('DapBreakpointCondition', { text = '', texthl = 'DapUIType' })
-            vim.fn.sign_define('DapLogPoint', { text = '', texthl = 'DapUIScope' })
-            vim.fn.sign_define('DapStopped', { text = '', texthl = 'DapUIPlayPause' })
-            vim.fn.sign_define('DapBreakpointRejected', { text = '󰜺', texthl = 'DapUIStop' })
-
-            dap.listeners.after.event_initialized["dapui_config"] = function()
-                dapui.open()
-            end
-        end,
     }
 }

@@ -271,7 +271,6 @@ return {
         dependencies = {
             'jay-babu/mason-null-ls.nvim',       -- For none-ls
             'williamboman/mason-lspconfig.nvim', -- For completion
-            'jay-babu/mason-nvim-dap.nvim',      -- For Debuging
             'nvim-neotest/nvim-nio'              -- Asynchronous IO
         },
         config = function()
@@ -319,13 +318,6 @@ return {
                     end)()
                 },
                 automatic_installation = true
-            })
-
-            -- Setup dap on mason
-            require("mason-nvim-dap").setup({
-                automatic_installation = true,
-                ensure_installed = { "codelldb", "cppdbg" },
-                handlers = {}
             })
         end
     },

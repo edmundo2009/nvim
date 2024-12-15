@@ -94,6 +94,7 @@ autocmd({ "BufWritePre" }, {
     end,
 })
 
+-- Setup link with gx with netrw disabled
 local gxlink_group = augroup('GXLink', {})
 autocmd("FileType", {
     group = gxlink_group,
@@ -102,5 +103,15 @@ autocmd("FileType", {
         vim.schedule(function()
             require("noice.text.markdown").keys(event.buf)
         end)
+    end,
+})
+
+-- Setup term settings on startup
+local term_group = augroup('term-setup', {})
+autocmd("TermOpen", {
+    group = term_group,
+    callback = function()
+        vim.opt.number = false
+        vim.opt.relativenumber = false
     end,
 })

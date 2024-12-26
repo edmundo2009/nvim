@@ -51,8 +51,8 @@ keymap.set('n', 'gl', '<Cmd>Lspsaga show_line_diagnostics<CR>', { desc = Msgstr(
 
 -- Inc Rename
 keymap.set('n', 'gr',function()
-    local inc_rename = require("inc_rename")
-    return ":" .. inc_rename.config.cmd_name .. " " .. vim.fn.expand("<cword>")
+  local inc_rename = require("inc_rename")
+  return ":" .. inc_rename.config.cmd_name .. " " .. vim.fn.expand("<cword>")
 end, { expr = true, desc = Msgstr("Renaming with immediate visual feedback") })
 
 -- Split window

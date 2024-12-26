@@ -1,16 +1,12 @@
 # NVIM Dotfiles
 
-## Contents 📦
-
-- Neovim Configuration
-
 ## Navigation ✈️
 
-[Back To Windows-Dotfiles <-](https://github.com/AndreM222/Windows-Dotfiles) (For Detailed Setup)
+[Back To Windows-Dotfiles <-](https://github.com/edmundo2009/Windows-Dotfiles) (For Detailed Setup)
 
-- [Navigate To Powershell Dotfiles <-](https://github.com/AndreM222/PowerShell) (For Detailed Setup)
+- [Navigate To Powershell Dotfiles <-](https://github.com/edmundo2009/PowerShell) (For Detailed Setup)
 
-- [Navigate To Dotfile Automizer <-](https://github.com/AndreM222/Dotfile-Automizer) (For Detailed Setup)
+- [Navigate To Dotfile Automizer <-](https://github.com/edmundo2009/Dotfile-Automizer) (For Detailed Setup)
 
 ## Dependencies 📃
 
@@ -24,17 +20,13 @@
 
 - [Fira-Font](https://github.com/ryanoasis/nerd-fonts) - `scoop install FiraCode-NF-Mono`
 
-<div align=center>or</div>
-
-- [Fira-Font](https://formulae.brew.sh/cask/font-fira-code-nerd-font#default) - `brew install --casck font-fira-code-nerd-font`
-
 ## Neovim Plugins 📲
 
 - [Lualine](https://github.com/nvim-lualine/lualine.nvim) - Neovim Bar
 - [copilot](https://github.com/zbirenbaum/copilot.lua) - Copilot
   <details> <summary>Dependencies</summary>
 
-  - [Copilot-Lualine](https://github.com/AndreM222/copilot-lualine) - Copilot Status Setup
+  - [Copilot-Lualine](https://github.com/edmundo2009/copilot-lualine) - Copilot Status Setup
 
   - [Copilot-CMP](https://github.com/hrsh7th/cmp-copilot) - Copilot Setup
   </details>
@@ -119,7 +111,7 @@
 
 ```
 📂 $HOME/AppData/Local/Nvim
-|__📂lua/andrem222
+|__📂lua/edmundo2009
 |   |__📂 lang
 |   |   |__📑 All Translations Files
 |   |__📂 pluginDev
@@ -209,15 +201,15 @@ If no language available or translation than it will setup the default message.
 
 Format for translations:
 ```json
-    "Message to print (message Id)": {
-        "msgstr (Translated message/Id)": ""
-    },
+  "Message to print (message Id)": {
+    "msgstr (Translated message/Id)": ""
+  },
 
 ```
 
 Location of translation files:
 ```
-📂 $HOME/AppData/Local/Nvim/lua/andrem222/lang
+📂 $HOME/AppData/Local/Nvim/lua/edmundo2009/lang
 |__📑 All Translations Files
 ```
 
@@ -246,12 +238,12 @@ Check you enabled transparency in the temrinal. If you still encounter
 problems then you probably have to enable it from your nvim configuration.
 Dracula theme transparency is not sufficient so some tweaks are requried.
 For example:
-                colors = {},
-                transparent_bg = true,
-                show_end_of_buffer = true,
-                overrides = {
-                    EndOfBuffer = { fg = "#282A36" }
-                },
+        colors = {},
+        transparent_bg = true,
+        show_end_of_buffer = true,
+        overrides = {
+          EndOfBuffer = { fg = "#282A36" }
+        },
 
 This will disable the background from dracula so transparency can be seen.
 ```

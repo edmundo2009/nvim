@@ -9,4 +9,4 @@ CopilotEnable = false
 CopilotDev = true
 
 -- Imports
-require("andrem222.pluginDev.Setup.copilot")
+require("edmundo2009.pluginDev.Setup.copilot")

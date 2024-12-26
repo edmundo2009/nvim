@@ -1,35 +1,35 @@
 if CopilotEnable then
-    return {
-        -- Plugin
-        {
-            "AndreM222/copilot-lualine",
-            dev = CopilotDev
-        },
+  return {
+    -- Plugin
+    {
+      "edmundo2009/copilot-lualine",
+      dev = CopilotDev
+    },
 
-        -- Requirements
+    -- Requirements
 
-        {
-            "zbirenbaum/copilot.lua",
-            cmd = "Copilot",
-            build = ":Copilot auth",
-            opts = {
-                suggestion = { enabled = true },
-                panel = { enabled = false },
-                filetypes = {
-                    markdown = true,
-                    help = true,
-                },
-            }
+    {
+      "zbirenbaum/copilot.lua",
+      cmd = "Copilot",
+      build = ":Copilot auth",
+      opts = {
+        suggestion = { enabled = true },
+        panel = { enabled = false },
+        filetypes = {
+          markdown = true,
+          help = true,
         },
+      }
+    },
 
-        {
-            "zbirenbaum/copilot-cmp",
-            opts = {},
-            config = function(_, opts)
-                require("copilot_cmp").setup(opts)
-            end,
-        },
-    }
+    {
+      "zbirenbaum/copilot-cmp",
+      opts = {},
+      config = function(_, opts)
+        require("copilot_cmp").setup(opts)
+      end,
+    },
+  }
 end
 
 return {}

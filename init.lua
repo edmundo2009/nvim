@@ -1,28 +1,28 @@
 if vim.loader then
-    vim.loader.enable()
+	vim.loader.enable()
 end
 
 _G.dd = function (...)
-    require("andrem222.debug")
+  require("edmundo2009.debug")
 end
 
 -- Startup settings
-require('andrem222.config')
+require('edmundo2009.config')
 
 -- Setup Translations
-require('andrem222.langMSG')
+require('edmundo2009.langMSG')
 
 -- Setup autocmd
-require('andrem222.autocmd')
+require('edmundo2009.autocmd')
 
 -- Setup Personal Plugins Settings
-require('andrem222.devconfig')
+require('edmundo2009.devconfig')
 
 -- Lazy setup and plugins
-require('andrem222.lazy')
+require('edmundo2009.lazy')
 
 -- Mapping of keys
-require('andrem222.bindings')
+require('edmundo2009.bindings')
 
 -- Theme modifications
-require('andrem222.theme')
+require('edmundo2009.theme')

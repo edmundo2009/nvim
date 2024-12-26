@@ -1,10 +1,10 @@
 {
-    "diagnostics.globals": [
-        "vim",
-        "statusIcon"
-    ],
-    "diagnostics.disable": [
-        "missing-fields",
-        "unused-vararg"
-    ]
+  "diagnostics.globals": [
+    "vim",
+    "statusIcon"
+  ],
+  "diagnostics.disable": [
+    "missing-fields",
+    "unused-vararg"
+  ]
 }

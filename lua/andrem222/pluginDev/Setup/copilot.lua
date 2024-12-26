@@ -1,33 +1,33 @@
 function CopilotIcon()
-    if CopilotEnable then
-        return {
-            'copilot',
-            symbols = {
-                status = {
-                    icons = {
-                        enabled = "",
-                        sleep = "",
-                        disabled = "",
-                        warning = "",
-                        unknown = ""
-                    }
-                }
-            }
+  if CopilotEnable then
+    return {
+      'copilot',
+      symbols = {
+        status = {
+          icons = {
+            enabled = "",
+            sleep = "",
+            disabled = "",
+            warning = "",
+            unknown = ""
+          }
         }
+      }
+    }
 
-    end
+  end
 
-    return ""
+  return ""
 end
 
 function CopilotCMP()
-    if CopilotEnable then
-        return {
-            name = "copilot",
-            group_index = 1,
-            priority = 100
-        }
-    end
+  if CopilotEnable then
+    return {
+      name = "copilot",
+      group_index = 1,
+      priority = 100
+    }
+  end
 
-    return {}
+  return {}
 end

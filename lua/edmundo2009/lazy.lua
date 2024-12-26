@@ -20,7 +20,7 @@ require("lazy").setup({
     {
       -- This is a plugin folder which contains the requirements for the
       -- plugins which are being developed
-      -- { import = "edmundo2009.pluginDev.Plugins" },
+      { import = "edmundo2009.pluginDev.Plugins" },
 
       -- This is a plugin folder which contains what I used for my dev environment
       { import = "edmundo2009.plugins" },

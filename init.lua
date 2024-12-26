@@ -10,7 +10,7 @@ end
 require('edmundo2009.config')
 
 -- Setup Translations
-require('edmundo2009.langMSG')
+-- require('edmundo2009.langMSG')
 
 -- Setup autocmd
 require('edmundo2009.autocmd')
